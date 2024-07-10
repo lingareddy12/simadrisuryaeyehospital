@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .card{
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; 
+            background-color: pink;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 100px; /* Initial height */
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            height:auto;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-content {
+            display: none;
+        }
+        .card:hover .card-content {
+            display: block;
+           
+        }
+        .card h3 {
+            color: #007bff;
+            margin-top: 0;
+        }
+        .card p {
+            text-align: justify; 
+            align-times:center;
+            justify-content:center;
+            margin-top: 10px;
+        }
+        .card ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+        .card li {
+            margin-bottom: 2px;
+        }
+
+        .missioncontainer{
+            display: flex;
+            justify-content: center;
+            flex-direction:row;
+            gap:50px;
+            margin-bottom:40px;
+        }
+        @media (max-width: 768px) {
+            .missioncontainer{
+                display: flex;
+                justify-content: center;
+                width:100%;
+                flex-direction:column;
+                gap:50px;
+                margin-bottom:40px;
+            }
+    </style>
+</head>
+<body> 
+<div class="missioncontainer">
+    <div class="card">
+        <h3>Mission Statement</h3>
+        <div class="card-content">
+            <p>To provide accessible and compassionate eye care services to underserved tribal communities in South Odisha, ensuring vision health equity through innovative solutions and community empowerment.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Vision Statement</h3>
+        <div class="card-content">
+            <p>To be a beacon of hope and excellence in eye health for tribal populations in South Odisha, pioneering sustainable healthcare models that transform lives and inspire positive change.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Core Values</h3>
+        <div class="card-content">
+            <ul>
+                <li><strong>Compassion:</strong> We treat every patient with empathy and dignity, understanding their unique needs.</li>
+                <li><strong>Excellence:</strong> We strive for clinical and operational excellence to deliver the highest standards of eye care.</li>
+                <li><strong>Accessibility:</strong> We ensure that all tribal communities have equitable access to our services regardless of their socioeconomic status.</li>
+                <li><strong>Collaboration:</strong> We foster partnerships with local communities, NGOs, and government agencies to maximize our impact.</li>
+                <li><strong>Innovation:</strong> We embrace innovation to continuously improve our services and reach more people effectively.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Goal Statement</h3>
+        <div class="card-content">
+            <p>To eradicate preventable blindness and visual impairment among tribal communities in South Odisha by 2030, through comprehensive eye care services, education, and community outreach programs.</p>
+        </div>
+    </div> 
+</div>
+
+</body>
+</html>

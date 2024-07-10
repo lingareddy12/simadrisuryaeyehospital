@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simadri Surya Eye Hospital</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <style>  
+
+
+     
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+      
+
+        #logo{
+            width: 50px;
+         } 
+
+         #carousal{
+            height: 600px;
+         } 
+
+
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: white;
+        } 
+
+
+ 
+ /* reviews */
+.container {
+    background-color: rgb(232, 242, 245); 
+    max-width: 1400px;
+    padding: 30px 20px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 25px #a7a7a7;
+    background-color: pink;
+}
+
+.tag {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.fa-heart {
+    color: rgba(255, 230, 0, 0.959);
+    font-size: 30px;
+}
+
+.card {
+    height: 220px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: -1px 3px 5px #a7a7a7;
+    background-color: white;
+}
+
+.testimonial {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    font-weight: 500;
+}
+
+.active-star {
+    color: #FBC02D;
+    margin-bottom: 8px;
+}
+
+.active-star:hover {
+    color: #F9A825;
+    cursor: pointer;
+}
+
+.profile {
+    padding-top: 10px;
+}
+
+.name {
+    font-weight: 700;
+}
+
+.designation {
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+.owl-carousel {
+    margin-bottom: 15px;
+}
+
+.owl-carousel .owl-stage-outer {
+    padding: 40px 10px;
+    height: 300px; 
+}
+
+.owl-carousel .owl-item img {
+    width: 45px !important;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+    border-radius: 50% !important;
+    background: inherit !important;
+    border: 3px solid #bbb;
+    color: #bbb !important;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+    border: 3px solid #1010ca;
+    color: #1010ca !important;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px 10px; /* Reduce padding for medium screens */
+        margin: 10px 0; /* Adjust margin for better fit */
+    }
+
+    .tag {
+        font-size: 1rem; /* Slightly decrease font size */
+    }
+
+    .card {
+        height: auto; /* Allow card height to adjust based on content */
+        padding: 10px 15px; /* Adjust padding */
+    }
+
+    .testimonial {
+        font-size: 0.85rem; /* Slightly decrease font size */
+    }
+
+    .owl-carousel .owl-stage-outer {
+        padding: 30px 10px; /* Adjust padding */
+        height: auto; /* Allow height to adjust */
+    }
+}
+
+
+
+
+
+
+
+
+ .aboutcontainer {
+    font-family: Georgia, serif;
+    width: 100%;
+
+    padding: 10px;
+    background-color: #fff;
+ 
+}
+
+.upper-row {
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    max-width: 100%;
+}
+
+.bottom-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between;
+}
+
+.small-div {
+    flex: 1 1 calc(33.333% - 10px); /* Allow each item to take up one third of the row minus some margin */
+    margin: 5px; /* Small margin for spacing */
+    box-sizing: border-box; /* Ensure padding and margin are included in the element's total width */
+    text-align: center; /* Center text and icons */
+}
+
+.small-div div:first-child {
+    margin-bottom: 10px;
+}
+
+         .matter
+        {
+            display: flex;
+            justify-content: center;  
+            font-family: Georgia, serif;
+            padding:30px 120px 10px 120px;
+        }
+
+        
+        #serviceimg{
+            width:100%;
+        }
+
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .upper-row {
+            padding: 0px;
+            
+    margin-bottom: 5px;
+        font-size: 16px; /* Decrease font size for small screens */
+   
+    }
+
+    .bottom-row {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+
+    .small-div {
+        flex: 1 1 100%; /* Each item takes up full width */
+        margin: 10px 0; /* Adjust margin for better spacing */
+    } 
+
+        .small-div div:first-child {
+        margin-bottom: 5px; /* Reduce bottom margin for smaller elements */
+    }
+
+        .matter {
+        flex-direction: column;
+        padding: 20px 10px 20px 10px; /* Reduce padding for small screens */
+        
+    }
+
+            #serviceimg{
+            width:100%;
+        }
+
+}
+
+
+
+
+
+
+        .map-container {
+            text-align: center; /* Center the map on the page */
+            margin: 20px 0;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 600px;
+            border: none; /* Remove the iframe border */
+        }
+
+        .navbar-custom {
+            background-color:#ffba00;
+        }
+
+        .navbar-custom .nav-item {
+            background-color:#ffba00;
+        }
+
+.trustcontainer {
+    font-family: Georgia, serif;
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+    justify-content: space-between;
+    gap: 20px; /* Gap between boxes */
+    padding: 20px 50px; /* Reduce padding for smaller screens */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.box {
+    font-family: Georgia, serif;
+    width: 45%;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.box img {
+    width: 100%; /* Ensure the image takes full width */
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.box .content {
+    margin-top: 20px;
+    overflow: hidden; /* Hide overflowing content */
+    max-height: 100px; /* Limit the height of the content */
+}
+
+.box.show .content {
+    max-height: none; /* Expand the content height */
+}
+
+.box .btn {
+    margin-top: 20px;
+    width: 100%; /* Ensure button takes full width on smaller screens */
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 10px; 
+    font-size: 15px; 
+    cursor: pointer; 
+    border-radius: 8px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.box .btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+@media (max-width: 768px) {
+    .trustcontainer {
+        padding: 20px; /* Further reduce padding for tablets */
+    }
+    
+    .box {
+        width: 100%; /* Each box takes full width on smaller screens */
+    }
+}
+
+
+        .teamcontainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px; /* Gap between boxes */
+            max-width:1800px;
+        }
+        .teambox {
+            width:250px;
+            padding: 10px;
+            text-align: center; 
+        
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .services-section {
+            text-align: center;
+            padding: 50px 0;
+           
+        }
+        
+        .services-section h2 {
+            font-size: 55px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .service-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 300px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color:#d3d3d3;
+        }
+        
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .service-card h3 {
+            font-size: 24px;
+        
+            margin: 20px 0 10px;
+            color: #ffff;
+        }
+        
+        .service-card p {
+            font-size: 14px;
+            padding: 0 20px 20px;
+            color: #666;
+            
+        }
+        
+        .service-card:hover {
+            transform: translateY(-40px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+            background-color:#99cfe0;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            width: 100%;
+        }
+        
+        
+        .background-image {
+            background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+           
+    width: 100%;
+    height: calc(100vh - 100px);
+            
+        } 
+  
+        
+        
+     
+        
+      
+
+
+        
+
+    </style>
+</head>
+<body>    
+
+
+    {% include "header.html" %}
+
+  
+    
+
+    <div class="welcome-section">
+        <img src="/static/images/homepage.png" alt="Background Image" class="background-image"> <!-- Replace with your image URL -->
+        
+    </div>
+
+
+
+
+
+
+<div class="services-section">
+    <h2>What We Offer</h2>
+    <div class="services-container">
+
+        <div class="service-card">
+            <img src="/static/images/glasses.jpeg" alt="Service 2">
+            <h3>OPTICALS</h3>
+            <p>We offer a wide range of stylish and functional prescription glasses. Our experienced staff will help you choose the perfect frames and lenses to match your lifestyle and vision needs, ensuring comfort and clarity.</p>
+        </div>
+        <div class="service-card">
+            <img src="/static/images/cataract.jpeg" alt="Service 1">
+            <h3>CATARACT</h3>
+            <p>We offer surgical correction of cataracts through clear corneal phacoemulsification, including micro-incision cataract surgery (MICS) and intraocular lens implantation. Our options for intraocular lenses include foldable, UV-protective, multifocal, and toric lenses.</p>
+        </div>
+        <div class="service-card">
+            <img src="/static/images/glaucoma.jpeg" alt="Service 3">
+            <h3>GLAUCOMA</h3>
+            <p>We offer comprehensive glaucoma management, including advanced diagnostics, medical therapy, laser treatments, and surgical interventions such as trabeculectomy and drainage implant surgery. Our personalized care and state-of-the-art techniques aim to preserve your vision and maintain your quality of life.</p>
+        </div>
+        <div class="service-card">
+            <img src="/static/images/cornea.jpeg" alt="Service 1">
+            <h3>CORNEA</h3>
+            <p>We provide comprehensive corneal care, including advanced diagnostics, medical treatments, and surgical procedures. Our services include corneal transplants, treatment for keratoconus, and management of corneal infections and dystrophies. We are committed to preserving your vision with personalized care and the latest medical techniques.</p>
+        </div>
+        <!-- Add more service cards as needed -->
+    </div>
+</div> 
+
+{% include 'slider.html'%}
+
+
+
+{% for i in range(1) %}
+{% include 'feedbacks.html' %}
+{% endfor %}
+
+
+
+
+
+
+
+
+
+    <div id="locateus" style="justify-content:center;display: flex;font-family: Georgia, serif;">
+        <h1>Locate Us</h1>
+    </div>
+
+    <div id="map" class="map-container">
+        <!-- Paste the copied iframe code here -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d3766.9409916278755!2d82.5420944!3d19.2414033!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3a3ab7007c5d32bd%3A0xc3a48e7806bf79b1!2sSimadri%20Surya%20Eye%20Hospital%2C%20Bypass%20road%2C%20beside%20Vigilance%20Office%2C%20Kukudabai%2C%20Chutiaguda%2C%20Odisha%20764059!3m2!1d19.2417397!2d82.54179359999999!5e0!3m2!1sen!2sin!4v1716089990628!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       
+    </div>
+
+
+
+     <div class="containers">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="/hospital/index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Services</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+          </ul>
+          <p class="text-center text-body-secondary">© Happy Days Batch, Inc</p>
+        </footer>
+      </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            var silder = $(".owl-carousel");
+            silder.owlCarousel({
+                autoPlay: false,
+                items: 1,
+                center: false,
+                nav: true,
+                margin: 40,
+                dots: false,
+                loop: true,
+                navText: ["<i class='fa fa-arrow-left' aria-hidden='true'></i>", "<i class='fa fa-arrow-right' aria-hidden='true'></i>"],
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    575: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    991: {
+                        items: 3
+                    },
+                    1200: {
+                        items: 4
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const box = this.parentElement;
+                box.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>

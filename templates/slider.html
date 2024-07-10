@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        .slider {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            width: calc(100%*2); /* Adjust based on the number of images */
+            animation: slide 10s infinite linear;
+        }
+
+        .slider-wrapper img {
+            height: 300px; /* Set the height of the images */
+            width: auto; /* Ensure each image takes the full container width */
+            flex: 0 0 8%; /* Adjust based on the number of images */
+            margin:10px;
+            border-radius:10px;
+            border-color:;
+        }
+        .slider-wrapper img:hover {
+            transform: translateY(-40px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+            background-color:#99cfe0;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-wrapper">
+            <img src="/static/images/slider1.jpg" alt="Image 1">
+            <img src="/static/images/slider6.jpg" alt="Image 2">
+            <img src="/static/images/slider2.jpg" alt="Image 2">
+            <img src="/static/images/slider3.jpg" alt="Image 3">
+            <img src="/static/images/slider8.jpg" alt="Image 4">
+            <img src="/static/images/slider5.jpg" alt="Image 1">
+            <img src="/static/images/slider7.jpg" alt="Image 3">
+            <img src="/static/images/slider4.jpg" alt="Image 4">
+            <img src="/static/images/slider9.jpg" alt="Image 3">
+            <img src="/static/images/slider10.jpg" alt="Image 4">
+            
+            <!-- Duplicate images for seamless transition -->
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.slider-wrapper').addEventListener('mouseover', () => {
+            document.querySelector('.slider-wrapper').style.animationPlayState = 'paused';
+        });
+
+        document.querySelector('.slider-wrapper').addEventListener('mouseout', () => {
+            document.querySelector('.slider-wrapper').style.animationPlayState = 'running';
+        });
+    </script>
+</body>
+</html>

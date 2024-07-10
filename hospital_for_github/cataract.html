@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glaucoma Disease Information</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+
+      
+
+          body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+      
+
+        #logo{
+            width: 50px;
+        } 
+
+        #header{
+            text-align: center;
+            background-color: pink;
+            padding:10px;
+            margin-top:10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        .reasoncontainer { 
+            font-family: Georgia, serif;
+            width:100%;
+            max-width: 1700px;
+            
+            
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .upper-row {
+            padding: 70px; 
+            text-align: center;
+            font-size: 24px; 
+            font-family: Georgia, serif;
+            max-width:100%;  
+        } 
+        .matter{
+            margin-top:30px;
+        }
+        
+        .riskcontainer {
+            font-family: Georgia, serif;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px; /* Gap between boxes */
+            padding:10px 120px 10px 120px;
+            font-size: 24px; 
+            background-color:#99cfe0;
+        }
+
+        .symptom,.risk{ 
+            width:50%;
+            padding:20px;
+        }
+
+        .typescontainer {
+            font-family: Georgia, serif;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* Gap between boxes */
+            padding:20px 100px 20px 100px;
+        }
+        .box {
+            font-family: Georgia, serif;
+            width: 45%;
+            padding: 20px;
+            position: relative;
+        }
+        .box img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .box .content {
+            margin-top: 20px;
+            overflow: hidden; /* Hide overflowing content */
+            max-height: 100px; /* Limit the height of the content */
+        }
+        .box.show .content {
+            max-height: none; /* Expand the content height */
+        }
+        .box .btn {
+            margin-top: 20px;
+            width: 30%; 
+            background-color: #4CAF50; 
+            color: white; 
+            padding: 10px 10px; 
+            font-size: 15px; 
+            cursor: pointer; 
+            border-radius: 8px; 
+
+        }
+        .box .btn:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+             
+        .treatcontainer { 
+            font-family: Georgia, serif;
+            width:100%;
+            max-width: 1700px;
+            padding: 20px;
+            background-color:#f5f5f5;
+        }
+        
+        .upper-row {
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 24px; 
+            font-family: Georgia, serif;
+            max-width:100%;
+            
+        }
+        
+        .bottom-row {
+            display: flex;
+            font-family: Georgia, serif;
+            justify-content: space-between;
+        }
+        
+        .small-div {
+            flex: 1;
+            margin: 0 10px;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            border-radius: 5px;
+        }
+        
+        .small-div:first-child {
+            margin-left: 0;
+        }
+        
+        .small-div:last-child {
+            margin-right: 0;
+        } 
+
+
+        .matter{
+            display: flex;
+            justify-content: center;  
+            font-family: Georgia, serif;
+            padding:30px 120px 10px 120px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .bottom-row {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .small-div {
+                margin: 10px 0;
+                width: 100%;
+                max-width: 300px; /* Ensure it doesn't become too wide */
+            }
+        
+            .matter {
+                padding: 30px 20px 10px 20px;
+            }
+        
+            .upper-row {
+                font-size: 20px; /* Reduce font size for smaller screens */
+            }
+
+            .riskcontainer{
+                font-size:20px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    {% include "header.html" %}
+    
+                
+    <div id='header'>
+        <h1>What is Cataract ?</h1>
+    </div>
+
+    <div class="container col-xxl-8 px-1 py-3">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="static\catarateye.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <p class="lead">A cataract is a clouding of the lens of the eye, which is typically clear. For people who have cataracts, seeing through cloudy lenses is like looking through a frosty or fogged-up window. Clouded vision caused by cataracts can make it more difficult to read, 
+                drive a car at night or see the expression on a friend's face.
+                Most cataracts develop slowly and don't disturb eyesight early on. But with time, cataracts will eventually affect vision.
+                At first, stronger lighting and eyeglasses can help deal with cataracts. But if impaired vision affects usual activities, cataract surgery might be needed. Fortunately, cataract surgery is generally a safe, effective procedure.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+    
+<div class="riskcontainer"> 
+    <div class="risk">
+        <h1>Who are at Risk .. ?</h1>
+        <div class="content">
+                <li>People over 60</li>
+                <li>Family members with Cataract</li>
+                <li>Steroid users</li>
+                <li>Eye injury</li>
+                <li>People with diabetes are at a higher risk of developing cataracts</li>
+                <li>Hypertension</li>
+        </div>
+    </div>
+    <div class="symptom">
+        <div class="content"> 
+            <h1>Symptoms</h1>
+        
+                <li>Clouded, blurred or dim vision</li>
+                <li>Trouble seeing at night</li>
+                <li>Sensitivity to light and glare.</li>
+                <li>Need for brighter light for reading and other activities.</li>
+                <li>Fading or yellowing of colors.</li>
+                <li>Double vision in one eye</li>
+        </div>
+
+    </div> 
+</div>
+
+
+<div id="aboutus" class="reasoncontainer">
+    <div class="upper-row">
+        <h1>Reason for Cataract</h1>
+        <div class="matter" >Most cataracts develop when aging or injury changes the tissue that makes up the eye's lens. Proteins and fibers in the lens begin to break down. This causes vision to become hazy or cloudy.
+
+            Some disorders passed down from parents that cause other health problems can increase your risk of cataracts. Cataracts also can be caused by other eye conditions, past eye surgery or medical conditions such as diabetes. Long-term use of steroid medicines also may cause cataracts to develop</div>
+    </div>
+</div>
+
+<div id="ourtrusts" style="justify-content:center;display: flex;font-family: Georgia, serif;">
+    <h1>Major types of Cataract</h1>
+</div>
+<div class="typescontainer"> 
+    <div class="box">
+        <img src="static\nuclearcataract.jpeg" alt="Image 1">
+        <div class="content">
+            <h2>Nuclear Cataracts</h2>
+            <p>These cataracts form in the center (nucleus) of the lens. 
+                Nuclear cataracts are often associated with aging and typically develop slowly over time. 
+                As they progress, they can cause the lens to become yellow or brown, leading to a gradual decrease in visual acuity and 
+                an increased difficulty with near vision. 
+                Nuclear cataracts can also result in changes in prescription, such as an increase in nearsightedness (myopia).
+                </p>
+        </div>
+        <button class="btn">Learn More</button>
+    </div>
+    <div class="box">
+        <img src="static\corticalcataract.jpeg" alt="Image 2">
+        <div class="content"> 
+            <h2>Cortical Cataracts</h2>
+            <p>
+                Cortical cataracts develop in the outer edge (cortex) of the lens. 
+                They are characterized by wedge-shaped opacities that start at the periphery of 
+                the lens and extend inward over time. Cortical cataracts can cause visual disturbances such as glare, halos around lights, and difficulty with contrast sensitivity. These cataracts
+                 can progress relatively rapidly compared to nuclear cataracts.
+            </p>
+        </div>
+        <button type="button" class="btn btn-primary">Learn More</button>
+
+    </div> 
+</div>   
+
+    
+<div id="treatment" class="treatcontainer">
+    <div class="upper-row">
+        <h1>Treatment </h1>
+        <div class="matter" ><p>
+            <strong>For diagnosis and treatment of Cataract, we have an experienced team of specialists and the latest technology</strong></div>
+    </div>
+    <div class="bottom-row">
+        <div class="small-div">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="blue" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                  </svg>
+            </div>    
+            <div>  
+                <br>
+                Slit-Lamp Examination
+            </div>
+        </div>
+        <div class="small-div">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="blue" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                  </svg>
+            </div>
+            <div>  
+                <br>
+                Optical Coherence Tomography
+            </div>
+        </div>
+        <div class="small-div">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="blue" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                  </svg>
+            </div>
+            <div>  
+                <br>
+                Ultrasound Biomicroscopy
+            </div>
+        </div>
+        <div class="small-div">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="blue" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                  </svg>
+            </div>
+            <div>  
+                <br>
+                Phacoemulsification
+            </div>
+        </div>
+        <div class="small-div">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="blue" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                  </svg>
+            </div>
+            <div>  
+                <br>
+                
+                Femtosecond Laser-Assisted Cataract Surgery
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="containers">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Services</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Review</a></li>
+      </ul>
+      <p class="text-center text-body-secondary">© Happy Days Batch, Inc</p>
+    </footer>
+  </div>
+
+
+</body>
+
+<script>
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const box = this.parentElement;
+            box.classList.toggle('show');
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simadri Surya Eye Hospital</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <style>  
+
+        
+        .teamcontainer {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Gap between boxes */ 
+           
+        }
+        .teambox {
+            padding: 10px;
+            border-radius: 15px;
+            background-color:pink;
+            text-align: center; 
+            flex: 1 1 calc(33.333% - 40px); /* 3 boxes per row with 20px gap on both sides */
+            max-width: calc(33.333% - 40px);
+            box-sizing: border-box;
+        }
+
+        #ourteam{
+            justify-content:center;
+            display: flex;
+            font-family: Georgia, serif;
+             padding:20px;
+      }
+        @media (max-width: 768px) {
+            .teambox {
+                flex: 1 1 calc(33.333%- 20px); /* 1 box per row with 20px gap on both sides */
+                max-width: calc(100% - 40px);
+            } 
+
+            .ourteam{
+                  display:flex;
+                  flex-direction:column;
+               
+                font-family: Georgia, serif;
+                 padding:20px;
+
+            }
+        }  
+
+        .staffcontainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+            padding: 20px;
+        }
+        .staffbox {
+            flex: 1 1 calc(16.66% - 20px); /* 6 boxes per row with space between */
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            background-color:pink;
+            border-radius: 10px;
+        }
+        .staffbox img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 10px; /* Center image and add space below */
+        }
+
+        .designation {
+            margin-top: auto; /* Push designation to the bottom */
+        }
+
+        @media (max-width: 768px) {
+            .staffbox {
+                flex: 1 1 calc(33.33% - 20px); /* 3 boxes per row with space between */
+            }
+        }
+        @media (max-width: 480px) {
+            .staffbox {
+                flex: 1 1 calc(50% - 20px); /* 2 boxes per row with space between */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    {% include 'header.html'%}
+
+    <div id="ourteam" >
+        <h1>Meet our Expert Team of Doctors</h1>
+    </div>
+
+    <div class="teamcontainer">
+        <div class="teambox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/doctor1.jpg" width="140" height="140" alt="Dr. Dweej Shah">
+            <h2 class="fw-normal">Dr. Dweej Shah</h2>
+            <p>Resident Doctor</p>
+            
+        </div>
+
+        <div class="teambox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/doctor2.jpg" width="140" height="140" alt="Dr.Sukesh">
+            <h2 class="fw-normal">Dr. Sukesh Gullipalli</h2>
+            <p>Ophthalmologist</p>
+           
+        </div>
+
+        <div class="teambox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/doctor3.jpg" width="140" height="140" alt="Dr. Vikhasini">
+            <h2 class="fw-normal">Dr. Vikhasini</h2>
+            <p>Ophthalmologist</p>
+            
+        </div>
+    </div> 
+
+    <div id="ourteam" >
+        <h1>Our Staff</h1>
+    </div>
+
+
+    
+    <div class="staffcontainer">
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s1.jpg"  alt="Bindu">
+            <p class="fw-normal"><strong>Bindu Rani Hial</strong></p>
+            <p class="designation">Staff Nurse</p>
+            
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s2.jpg"  alt="Santi">
+            <p class="fw-normal"><strong>Santi Priya Sadhu</strong></p>
+            <p class="designation">Staff Nurse</p>
+            
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s3.jpg"  alt="Albina">
+            <p class="fw-normal"><strong>Albina Lochhaman</strong></p>
+            <p class="designation">Staff Nurse</p>
+           
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s4.jpg"  alt="Robina">
+            <p class="fw-normal"><strong>Robina Manjari Hial</strong></p>
+            <p class="designation">Staff Nurse</p>
+            
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s5.jpg"  alt="Rashmitha">
+            <p class="fw-normal"><strong>Rashmitha Kumari Suna</strong></p>
+            <p class="designation">Staff Nurse</p>
+            
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s6.jpg" alt="soniya ">
+            <p class="fw-normal"><strong>Santi Kumari Soniya</strong></p>
+            <p class="designation">Staff Nurse</p>
+          
+        </div>
+    </div> 
+
+    <div class="staffcontainer">
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s7.jpg"  alt="Rekhansu">
+            <p class="fw-normal"><strong>Rekhansu Pani</strong></p>
+            <p class="designation">Lab Technician</p>
+            
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s8.jpg"  alt="Narayana">
+            <p class="fw-normal"><strong>Suvvada Narayana Rao</strong></p>
+            <p class="designation">Optometrist</p>
+            
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s9.jpg"  alt="Rama Lakshmi">
+            <p class="fw-normal"><strong>Rama Lakshmi Pinninti</strong></p>
+            <p class="designation">Optometrist</p>
+           
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s10.jpg"  alt="Priyabatra">
+            <p class="fw-normal"><strong>Priyabatra Chhualsingh</strong></p>
+            <p class="designation">Optometrist</p>
+            
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s11.jpg"  alt="victoria">
+            <p class="fw-normal"><strong>Korabu Victoria</strong></p>
+            <p class="designation">Optometrist</p>
+            
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s12.jpg" alt="Sima">
+            <p class="fw-normal"><strong>Korabu Sima</strong></p>
+            <p class="designation">Optometrist</p>
+          
+        </div>
+    </div> 
+
+
+    <div class="staffcontainer">
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s13.jpg"  alt="Manaswini">
+            <p class="fw-normal"><strong>Manaswini Nayak</strong></p>
+            <p class="designation">OT Incharge</p>
+            
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s14.jpg"  alt="Protibha">
+            <p class="fw-normal"><strong>Protibha Rani Naik</strong></p>
+            <p class="designation">OT Sister</p>
+            
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s15.jpg"  alt="Renuka">
+            <p class="fw-normal"><strong>Gedda Renuka</strong></p>
+            <p class="designation">OT Sister</p>
+           
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s16.jpg"  alt="Bhagabti">
+            <p class="fw-normal"><strong>Bhagabti Rani</strong></p>
+            <p class="designation">OT Sister</p>
+            
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s17.jpg"  alt="Junas">
+            <p class="fw-normal"><strong>Junas Kharai</strong></p>
+            <p class="designation">CSSD Technician</p>
+            
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s18.jpg" alt="Pribikiran">
+            <p class="fw-normal"><strong>Pribikiran Hial</strong></p>
+            <p class="designation">CSSD Technician</p>
+          
+        </div>
+    </div>  
+
+
+    <div class="staffcontainer">
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s19.jpg"  alt="Rama Devi">
+            <p class="fw-normal"><strong>Botta Krishna Rama Devi</strong></p>
+            <p class="designation">Opticals Incharge & Research Assistant</p>
+            
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s20.jpg"  alt="Dipti">
+            <p class="fw-normal"><strong>Ms. Dipti Patnaik</strong></p>
+            <p class="designation">Pharmacist</p>
+            
+        </div>
+
+        <div class="staffbox">
+            <img class="bd-placeholder-img rounded-circle" src="/static/images/s21.jpg"  alt="Amrit">
+            <p class="fw-normal"><strong>Mr. Amrit Bhitto</strong></p>
+            <p class="designation">Pharmacist</p>
+           
+        </div>
+
+       
+    </div> 
+
+    <div class="containers">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="/hospital/index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Services</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+          </ul>
+          <p class="text-center text-body-secondary">© Happy Days Batch, Inc</p>
+        </footer>
+      </div>
+    </div>
+    
+
+
+
+
+    
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

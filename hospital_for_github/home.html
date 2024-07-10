@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Hospitals</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Your custom CSS -->
+    <style>
+         #logo{
+            width: 50px;
+         } 
+
+         #carousal{
+            height: 660px;
+         } 
+
+         #home{
+            background-color :pink;
+         } 
+
+         #mission{
+            background-color:pink;
+            
+         }
+
+       
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button> 
+    <a href="#">
+         <img id="logo" class="navbar-brand" src="static\hospitallogo.jpg"></img>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link" href="#about-mission">Our Mission</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about-history">Our History</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about-team">Our Team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#departments">Departments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('media') }}">Media</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar-nav ml-auto">
+        <a class="nav-link btn btn-primary" href="{{ url_for('index') }}">Review</a>
+    </div>
+</nav>
+
+<!-- Image Carousel Below Navbar -->
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+        <li data-target="#carouselExampleSlidesOnly" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="static\hospitalpic.jpg" id="carousal" class="d-block w-100" alt="First Slide" >
+        </div>
+        <div class="carousel-item">
+            <img src="static\hospitalpic2.png"  id="carousal" class="d-block w-100" alt="Second Slide">
+        </div>
+        <div class="carousel-item">
+            <img src="static\hospitalpic.jpg" id="carousal" class="d-block w-100" alt="Third Slide">
+        </div>
+    </div>
+</div>    
+
+
+
+
+
+<div class="container my-5 " style="background-color:pink ;max-width: 1400px;">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5-reverse align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Our Mission</h1>
+        <p class="lead">Simadri Surya Eye Hospital has been a beacon of excellence in eye care since its inception.
+            Our mission is focusing on providing accessible and quality charitable eye care services to the 13 primitive
+             tribal communities and individuals in the Below Poverty Line (BPL) category. Additionally, we aim to offer 
+             affordable eye care to the general public in and around the areas of Nabarangpur, Koraput, Bhawanipatnam, Jagdalpur
+             , and adjacent 11 districts of Odisha and Chhattisgarh. Founded and operated by the Susheela Public Charitable Trust and 
+             Simadri Misra Charitable Trust, our hospital embodies the vision of its benefactors to offer accessible, quality eye care to
+              all segments of society.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">  
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-0 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-2" src="static\hospitalpic2.png" alt="" width="500">
+      </div>
+    </div>
+  </div>
+
+
+<div class="container my-5" style="margin-bottom:100px;background-color:orange;max-width: 1400px;">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5-reverse align-items-center rounded-3 border shadow-lg">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="static\hospitalpic.jpg"  class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">About Our Trusts</h1> 
+        
+        <p class="lead">
+            <li>The "Susheela Public Charitable Trust", renowned for its successful management
+             of eye hospitals in rural and tribal areas, epitomizes a dedicated effort
+              towards improving eye health care in underserved communities. 
+              With a focus on providing comprehensive eye care services, the Trust leverages its
+               expertise in hospital management to ensure that individuals in remote locations have access to
+                quality eye treatments and surgeries.</li>
+            <li>The "Simadri Misra Charitable Trust," established in 2002 in memory of the freedom fighter and advocate Sri Simadri Misra, continues his legacy of supporting tribal communities in Odisha. Misra, who dedicated his life to the rights of tribals in Nabarangpur and edited the "Dandakaranya Times" to highlight their issues, is commemorated through the trust's efforts. Founded by his son, Sh. J P Misra, and currently managed by family members, the trust offers free education, boarding, and other essentials to 150 tribal students from BPL families across Odisha in a hostel in Bhubaneswar. The trust, recognized for its contributions with Section 80G and CSR registrations, exemplifies sustained commitment to tribal upliftment.</li>
+            </p>
+        
+          
+      </div>
+    </div>
+  </div>   
+
+
+
+
+  <div id="about-team" class="container marketing" style="margin-bottom:100px;background-color:white;max-width: 1400px;">
+    <div class="row">
+      <div class="col-lg-3">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+        <h2 class="fw-normal">Dr.Uday Teja Reddy</h2>
+        <p>Chariman </p>
+        <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+        <h2 class="fw-normal">Dr.Bashitha</h2>
+        <p>Glaucoma Specialist</p>
+        <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+        <h2 class="fw-normal">Dr.Gowthami</h2>
+        <p>Surgoen</p>
+        <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-3">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+        <h2 class="fw-normal">Dr.Linga Reddy</h2>
+        <p>Cataract Specialist</p>
+        <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      </div>
+    </div><!-- /.row --> 
+
+</div>
+
+
+    
+
+
+    <div class="container my-5" style="margin-bottom:100px;background-color:gray;max-width: 1400px;">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5-reverse align-items-center rounded-3 border shadow-lg">
+
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Our Services</h1>
+            <p class="lead">
+              <hr><strong>Comprehensive Eye Examinations:</strong> Routine eye exams are conducted to assess vision health, screen for eye diseases, and prescribe corrective lenses if needed.
+              <hr><strong> Refractive Surgery: </strong>Procedures like LASIK (Laser-Assisted In Situ Keratomileusis) are offered to correct refractive errors such as nearsightedness, farsightedness, and astigmatism.
+              <hr><strong>Corneal Transplantation:</strong> Eye hospitals may offer corneal transplantation procedures to restore vision in patients with damaged or diseased corneas
+              <hr><strong> Retinal Services: </strong>Diagnosis and treatment of retinal diseases such as diabetic retinopathy, macular degeneration, and retinal detachment.</p>
+          </div>
+
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img id= "services" src="static\servives.jpeg"  class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" loading="lazy">
+          </div>
+        </div>
+      </div> 
+
+      <body>
+        <div class="container rounded">
+            <div class="d-flex justify-content-center fas fa-heart"></div>
+            <p class="tag">Our Clients love</p>
+            <h1 class="text-primary text-center head">What we do</h1>
+            <div class="owl-carousel owl-theme">
+                {% for testimonial in testimonials %}
+                <div class="owl-item">
+                    <div class="card d-flex flex-column">
+                        <div class="mt-2">
+                            {% for i in range(1, 6) %}
+                                {% if i <= testimonial.stars %}
+                                    <span class="fas fa-star active-star"></span>
+                                {% else %}
+                                    <span class="far fa-star active-star"></span>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="main font-weight-bold pb-2 pt-1">{{ testimonial.ratingtext }}</div>
+                        <div class="testimonial">{{ testimonial.ratingtext }}</div>
+                        <div class="d-flex flex-row profile pt-4 mt-auto">
+                            <img src="{{ testimonial.image_url }}" alt="" class="rounded-circle">
+                            <div class="d-flex flex-column pl-2">
+                                <div class="name">{{ testimonial.name }}</div>
+                                <p class="text-muted designation">Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+<!-- Link Bootstrap JS and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        // Smooth scrolling to section on click
+        $('a[href^="#"]').on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+            if( target.length ) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        var silder = $(".owl-carousel");
+        silder.owlCarousel({
+            autoPlay: false,
+            items: 1,
+            center: false,
+            nav: true,
+            margin: 40,
+            dots: false,
+            loop: true,
+            navText: ["<i class='fa fa-arrow-left' aria-hidden='true'></i>", "<i class='fa fa-arrow-right' aria-hidden='true'></i>"],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                575: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                991: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                }
+            }
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const stars = document.querySelectorAll('.star');
+        const starsInput = document.getElementById('starsInput');
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const value = star.getAttribute('data-value');
+                starsInput.value = value;
+
+                stars.forEach(s => s.classList.remove('selected'));
+                for (let i = 0; i < value; i++) {
+                    stars[i].classList.add('selected');
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simadri Surya Eye Hospital</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <style>  
+
+
+        .navcontainer {
+            width: 100%; 
+        }  
+    
+    
+        .flex-container {
+            display: flex;
+            background-color:#99cfe0; 
+            padding:10px 10px 10px 20px;
+    
+          }
+          
+          .flex-container > div {
+            width: 100px;
+          }
+    
+          #newlogo{
+            width: 110%; 
+            height:110%;
+    
+          }
+    
+          #name
+          { 
+            display: flex;
+      
+            align-items: center;
+            width:30%; 
+    
+            justify-content:center; 
+            font-size:30px;
+          } 
+    
+          #appointment{
+            width:25%;
+           margin-left:auto;
+            display:flex; 
+             gap:10px;
+            justify-content:center;
+          } 
+    
+          #timings{
+            display:flex;
+            flex-direction: column;
+            width:50%; 
+
+            height:100%;
+          }  
+          #app{
+            width:50%; 
+          }
+    
+          #timelogo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          } 
+    
+          #apptext{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align:center;
+          }
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        
+            #name {
+                font-size: 18px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        
+            #appointment {
+                width: 100%;
+                flex-direction: column;
+                margin: 10px 0;
+            }
+        
+            #timings, #app {
+                width: 100%;
+                margin: 10px 0;
+            }
+        
+            #timelogo, #apptext {
+                flex-direction: row;
+                gap: 10px;
+            }
+            
+            #name {
+                font-size: 18px;
+            }
+
+            #carousal {
+                height: 300px;
+            }
+
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+          body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+ .navbar {
+    background-color: white;
+    display: flex;
+    z-index: 1000;
+    justify-content: center; /* Center navbar items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap on small screens */
+}
+
+.navbar a {
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    position: relative; /* Ensure relative positioning for dropdown arrow */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #99cfe0;
+    color: black;
+}
+
+.navbar .dropdown {
+    position: relative;
+    display: inline-block; /* Ensure inline-block for proper alignment */
+}
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f5f5f5; 
+    min-width: 160px;
+    z-index: 1001;
+    top: 100%; /* Position dropdown below the navbar */
+    left: 0;
+}
+
+.navbar .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.navbar .dropdown-content a:hover {
+    background-color: #99cfe0;
+    color: black;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar .dropdown .dropbtn::after {
+    content: "\25BC"; /* Unicode character for down arrow */
+    font-size: 12px;
+    margin-left: 5px; /* Adjust spacing between text and arrow */
+}
+
+
+@media (max-width: 768px) { 
+
+    .nav-item{
+        display: flex;
+        flex-direction:column; 
+        
+    }
+
+
+}
+      
+
+    </style>
+</head>
+<body>    
+
+
+    <div class="navcontainer">
+        <div class="flex-container">
+            <div>
+                <a href="#">
+                    <img id="newlogo" class="navbar-brand" src="/static/hospitalmainlogo.png"></img>
+               </a>
+            </div>
+            <div id="name">Simadri Surya Eye Hospital</div>
+            <div id="appointment">
+                <div id="app">
+                  
+                    <div id="timelogo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="red" class="bi bi-phone" viewBox="0 0 16 16">
+                            <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                          </svg>
+                    </div>
+                      <div id="apptext">
+                            <p><strong>Appointment</strong><br>8555070176<br>6858796633</p>
+                      </div>
+    
+                </div>
+                <div id="timings">
+                   <div id="timelogo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="red" class="bi bi-stopwatch" viewBox="0 0 16 16">
+                        <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5z"/>
+                        <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64l.012-.013.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5M8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3"/>
+                      </svg> 
+                    </div>
+                      <div id="apptext">
+                            <p><strong>OPD Hours</strong><br>Monday - Saturday <br>9.00 AM - 5.30 PM</p>
+                      </div>
+                    
+                </div>
+            </div>  
+          </div>
+    </div>
+    
+    <div class="navbar"> 
+
+        
+        <div class="nav-item">
+           <a href="{{ url_for('index')}}#aboutus">About us</a>
+        </div>
+        <div class="nav-item">
+            <a href="{{ url_for('index')}}#ourtrusts">Our trusts</a>
+        </div>
+        
+        <div class="nav-item">
+            <div class="dropdown">
+                <a class="dropbtn">Services</a>
+                <div class="dropdown-content">
+                     <a href="{{ url_for('glaucoma')}}">Glaucoma</a>
+                    <a href="{{ url_for('cataract')}}">Cataract</a> 
+
+                </div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="{{ url_for('index')}}#ourteam">Our Team</a>
+        </div>
+        <div class="nav-item">
+            <a href="{{ url_for('camp')}}">Camp</a>
+        </div>
+        <div class="nav-item">   
+            <a href="{{ url_for('research')}}">Research</a> 
+        </div>
+        <div class="nav-item">
+            <a href="#">Contact</a>
+        </div>
+        <div class="nav-item">
+            <a href="#">Review</a> 
+        </div>
+        </div>
+    </div> 
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+      
+
+    <script>
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const box = this.parentElement;
+                box.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>

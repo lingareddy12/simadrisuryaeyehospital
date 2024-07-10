@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Cards Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container-wrapper {
+            width: 100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background-color:pink;
+        }
+
+        .container {
+            display: flex;
+            width:1650px;
+            gap: 30px;
+            padding: 40px;
+            overflow-x:scroll;
+            
+        }
+
+        .container div{
+           
+            padding:10px; 
+            flex:none;
+           
+        }
+
+        .container::-webkit-scrollbar{
+            display:none;
+        
+        }
+
+        .card{
+            width:23%;
+            height:300px;
+            border-radius:20px;
+            display:flex;
+            flex-direction:column;
+           
+            padding: 0px;
+            margin:0px;
+            background-color:white;
+        
+
+        }
+
+        .card:hover{
+            transform:scale(1.1);
+        }
+
+       
+
+
+        #nextbtn,#backbtn{
+            
+            padding:20px;
+            width: 60px;
+            height:60px;
+          
+            cursor: pointer;
+            color: blue;
+        
+        } 
+
+        .stars{
+            display: flex;
+            flex-direction:row; 
+        }
+
+        .stars .fas,
+        .stars .far { 
+            padding-left:5px;
+                  color: #FFD700; /* Gold color for the stars */
+          }
+
+          .text{
+            font-weight: bold;
+            word-wrap: break-word; 
+            height:170px;
+            font-size:16px;
+            margin:0px;
+          }
+
+          .profile {
+
+            display: flex;
+            flex-direction:row;
+            padding:0px; 
+
+            margin-bottom:0px;
+          
+        }
+
+
+        .name {
+            font-weight: bold;
+            font-size:12px;
+            padding:0px;
+        }
+
+        #heading{
+            justify-content:center;
+        display: flex;
+        font-family: Georgia, serif;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .card{
+                width:100%;
+            }
+          }
+
+    
+        
+
+   
+
+    </style>
+</head>
+<body>
+
+    <div id="heading">
+        <h1>Our Patients Love What We Do</h1>
+    </div>
+       
+   
+    <div class="container-wrapper">
+            <i class="fas fa-chevron-left" id="backbtn"></i>
+
+        <div class="container">  
+           
+            {% for card_data in cards %}
+            
+                <div class="card ">
+                  
+                    <div class="stars">
+                        {% for i in range(1, 6) %}
+                            {% if i <= card_data[3] %}
+                                <span class="fas fa-star active-star"></span>
+                            {% else %}
+                                <span class="far fa-star"></span>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="text"> 
+                       <p> {{ card_data[4]}}</p>
+                    </div>
+                    <div class="profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class=" person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                          </svg>
+                       
+                      
+                            <div class="name">
+                               <p>{{ card_data[1]}}</p>
+                            </div>
+                    </div>
+                    
+                </div>
+            {% endfor %}
+        </div>
+
+            <i class="fas fa-chevron-right" id="nextbtn"></i>
+    </div>
+ 
+    <script>
+        let container = document.querySelector('.container');
+        let backbtn=document.getElementById("backbtn");
+        let nextbtn=document.getElementById("nextbtn");
+
+        nextbtn.addEventListener("click",()=>{
+            container.scrollLeft+=200;
+        });
+
+        backbtn.addEventListener("click",()=>{
+            container.scrollLeft-=200;
+        });
+
+
+
+
+    </script>
+</body>
+</html>
