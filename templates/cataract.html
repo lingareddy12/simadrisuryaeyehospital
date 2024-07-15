@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glaucoma Disease Information</title>
+    <title>Cataract</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -184,16 +184,13 @@
                 flex-direction:column;
                 font-size:14px;
                 justify-content:center;
+              
                 align-items:center;
                 padding:0px;
                 
-            }
+            }  
 
-            .symptom,.risk{ 
-                width:100%;
-                padding:5px;
-              
-            }
+           
 
             .typescontainer {
                 display:flex;
@@ -205,10 +202,30 @@
                 padding:0px;
                 
             } 
-            .box{
+           
+          
+            .risk,.symptom{ 
+                width:100%;
+                padding:5px;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+              
+            }
+            
+            .box{ 
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
                
                 width:100%;
                 padding:0px;
+            } 
+            .box img{
+                width:200px;
+                height:200px;
             }
         }
 
@@ -253,23 +270,22 @@
                 <li>Family members with Cataract</li>
                 <li>Steroid users</li>
                 <li>Eye injury</li>
-                <li>People with diabetes are at a higher risk of developing cataracts</li>
+                <li>People with diabetes</li>
                 <li>Hypertension</li>
         </div>
     </div>
+
     <div class="symptom">
-        <div class="content"> 
-            <h1>Symptoms</h1>
-        
+        <h1>Symptoms</h1>
+        <div class="content">
                 <li>Clouded, blurred or dim vision</li>
                 <li>Trouble seeing at night</li>
                 <li>Sensitivity to light and glare.</li>
-                <li>Need for brighter light for reading and other activities.</li>
+               
                 <li>Fading or yellowing of colors.</li>
-                <li>Double vision in one eye</li>
+                <li>Double vision in one eyen</li>
         </div>
-
-    </div> 
+    </div>
 </div>
 
 
@@ -297,7 +313,7 @@
                 Nuclear cataracts can also result in changes in prescription, such as an increase in nearsightedness (myopia).
                 </p>
         </div>
-        <button class="btn">Learn More</button>
+        <button  id="btn1" class="btn">Learn More</button>
     </div>
     <div class="box">
         <img src="static/images\corticalcataract.jpeg" alt="Image 2">
@@ -310,7 +326,7 @@
                  can progress relatively rapidly compared to nuclear cataracts.
             </p>
         </div>
-        <button type="button" class="btn btn-primary">Learn More</button>
+        <button id="btn2" type="button" class="btn btn-primary">Learn More</button>
 
     </div> 
 </div>   
@@ -402,6 +418,16 @@
 
 
 </body>
+
+<script>
+    document.getElementById("btn1").onclick = function() {
+        this.style.display = "none";
+    };
+
+    document.getElementById("btn2").onclick = function() {
+        this.style.display = "none";
+    };
+</script>
 
 <script>
     document.querySelectorAll('.btn').forEach(btn => {

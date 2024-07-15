@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glaucoma Disease Information</title>
+    <title>Retina</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -71,14 +71,14 @@
         }
         .box img {
             width: 80%;
-            height: auto;
+            height: 300px;
             display: block;
             margin-bottom: 10px;
         }
         .box .content {
             margin-top: 20px;
             overflow: hidden; /* Hide overflowing content */
-            max-height: 100px; /* Limit the height of the content */
+            max-height: 45px; /* Limit the height of the content */
         }
         .box.show .content {
             max-height: none; /* Expand the content height */
@@ -89,7 +89,7 @@
             background-color: #4CAF50; 
             color: white; 
             padding: 10px 10px; 
-            font-size: 15px; 
+            font-size: 13px; 
             cursor: pointer; 
             border-radius: 8px; 
 
@@ -195,13 +195,21 @@
                 justify-content:center;
                 align-items:center;
                 gap:20px;
+               
                 padding:0px;
                 
             } 
             .box{
-               
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
                 width:100%;
                 padding:0px;
+            }
+            .box img{
+                width:200px;
+                height:200px;
             }
         }
 
@@ -216,18 +224,16 @@
 
 
     <div id='header'>
-        <h1>What is Glaucoma ?</h1>
+        <h1>What is Medical Retina?</h1>
     </div>
 
     <div class="container col-xxl-8 px-1 py-3">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
-            <img src="/static/images/glaucoma.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            <img src="/static/images/retina.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
           </div>
           <div class="col-lg-6">
-            <p class="lead">Glaucoma is the second leading cause of irreversible blindness worldwide. Glaucoma has been called the “silent thief of sight” as it has no apparent symptoms.
-            Glaucoma is the name given to a group of eye diseases where vision is lost due to damage to the optic nerve. Glaucoma has been called the “silent thief of sight,” because the most common type, primary open-angle glaucoma, has no symptoms until it reaches an advanced stage when vision loss becomes apparent.
-            Without treatment, people with glaucoma slowly lose their peripheral (side) vision until they seem to be looking through a tunnel. Over time, central vision may worsen until no vision remains.</p>
+            <p class="lead">Medical retina is a subspecialty within ophthalmology that focuses on the diagnosis and treatment of diseases and conditions affecting the retina, the light-sensitive layer at the back of the eye. The retina plays a crucial role in vision by converting light into neural signals, which are then processed by the brain to create visual images. Disorders of the retina can significantly impact vision and overall eye health.</p>
           </div>
         </div>
       </div>
@@ -238,77 +244,93 @@
         <h1>Who are at Risk .. ?</h1>
         <div class="content">
                 <li>People over 60</li>
-                <li>Family members with glaucoma</li>
-                <li>Steroid users</li>
-                <li>Eye injury</li>
-     <strong>Other possible risk factors include:</strong>
-                <li>High myopia (nearsightedness)</li>
-                <li>Hypertension</li>
+                <li>Family History</li>
+                <li>People with Obesity</li>
+                <li>People with Diabetes</li>
+    
+                <li>People with Hypertension</li>
         </div>
     </div>
     <div class="symptom">
         <div class="content"> 
             <h1>Symptoms</h1>
         
-                <li>Eye pain or pressure</li>
-                <li>Headaches</li>
-                <li>Rainbow-colored halos around lights</li>
-                <li>Low vision, blurred vision</li>
-                <li>Nausea and vomiting</li>
-                <li>Red eyes</li>
+                <li>Blurry Vision</li>
+                <li>Dark Areas of Vision</li>
+                <li>Sudden Vision Loss</li>
+                <li>Sudden Increase in Floaters</li>
+                <li>Night Blindness</li>
+                <li>Straight Lines Appear Bent</li>
         </div>
 
     </div> 
 </div>
 
 
-<div id="aboutus" class="reasoncontainer">
-    <div class="upper-row">
-        <h1>Reason for Glaucoma</h1>
-        <div class="matter" >There is no particular reason for glaucoma. But it is affected by many factors. The most significant one is intraocular eye pressure. Our eyes produce a fluid called aqueous humor for nourishing the eyes. This liquid flows through the pupil to the front of the eye. In a healthy eye, the fluid leaves through a drainage canal located between the iris and cornea.
-            But if you have glaucoma, the drainage canals become blocked with microscopic deposits. The fluid with its natural drainage blocked builds up in the eye. This excess fluid puts pressure on the eye. If untreated, this elevated eye pressure can damage the optic nerve.</div>
-    </div>
-</div>
+
 
 <div id="ourtrusts" style="justify-content:center;display: flex;font-family: Georgia, serif;">
-    <h1>Major types of Glaucoma</h1>
+    <h1>Major types of Medical Retina</h1>
 </div>
 <div class="typescontainer"> 
     <div class="box">
-        <img src="static/images\openglaucoma.jpg" alt="Image 1">
+        <img src="static\images\amd.jpg" alt="Image 1">
         <div class="content">
-            <p><strong>Primary Open-Angle Glaucomap</strong></p>
-            <p>Primary Open-Angle Glaucoma (POAG) is the most common form of glaucoma, affecting about three million Americans. It happens when the eye’s drainage canals become clogged over time.
-                The inner eye pressure (also called intraocular pressure or IOP) rises because the correct amount of fluid can’t drain out of the eye. With open-angle glaucoma, the entrances to the drainage canals 
-                are clear and should be working correctly. The clogging problem occurs further inside the drainage canals, similar to a clogged pipe below the drain in a sink.
-                Most people have no symptoms and no early warning signs. If open-angle glaucoma is not diagnosed and treated, it can cause a gradual loss of vision. This type 
-                of glaucoma develops slowly and sometimes without noticeable sight loss for many years. It usually responds well to medication, especially if caught early and treated.
-                </p>
+            <p><strong>Age-Related Macular Degeneration (AMD)</strong></p>
+            <p>
+                <li><strong>Dry AMD:</strong>Characterized by the thinning of the macula and the presence of drusen (yellow deposits). It progresses slowly and leads to gradual vision loss.</li>
+                <li><strong>Wet AMD:</strong>Caused by abnormal blood vessels growing under the retina and leaking fluid or blood, leading to rapid and severe vision loss.</li>
+            </p>
         </div>
         <button id="btn1" class="btn">Learn More</button>
     </div>
-    <div class="box">
-        <img src="static/images\angleglaucoma.jpg" alt="Image 2">
-        <div class="content"> 
-            <p><strong>Angle-Closure Glaucoma</strong></p>
-            <p>
-                Angle-closure glaucoma is a type of glaucoma where the iris bulges. The bulging iris partially or completely blocks the drainage angle and as a result, fluid can’t circulate through the eye and pressure increases.
-                Angle-closure glaucoma can take the form of acute angle-closure glaucoma or narrow-angle glaucoma. You may also hear people refer to angle-closure glaucoma as closed-angle glaucoma. It may occur suddenly or gradually. Closed-angle glaucoma is much more rare and is very different from open-angle glaucoma, in that the eye pressure usually rises very quickly.
 
-With angle-closure glaucoma, the iris is not as wide and open as it should be. The outer edge of the iris bunches up over the drainage canals, when the pupil enlarges too much or too quickly. This can happen when entering a dark room. A simple test can be used to see if your angle is normal and wide or abnormal and narrow.
+    <div class="box">
+        <img src="static\images\diabeticretinopathy.jpg" alt="Image 2">
+        <div class="content"> 
+            <p><strong>Diabetic Retinopathy</strong></p>
+            <p>
+                <li><strong>Non-proliferative DR:</strong>Early stage, characterized by microaneurysms, hemorrhages, and retinal swelling. </li>
+                    <li><strong>Proliferative DR:</strong>Advanced stage, involving the growth of new, abnormal blood vessels on the retina, which can bleed and cause scar tissue.</li>
             </p>
         </div>
         <button  id="btn2" type="button" class="btn btn-primary">Learn More</button>
-
     </div> 
+
+    <div class="box">
+        <img src="static\images\retinaldetachment.jpg" alt="Image 2">
+        <div class="content"> 
+            <p><strong>Retinal Detachment</strong></p>
+            <p>
+                <li><strong>Rhegmatogenous Retinal Detachment: </strong>Caused by a tear or break in the retina that allows fluid to get under it and separate it from the underlying tissue. </li>
+                <li><strong>Tractional Retinal Detachment:</strong>Occurs when scar tissue on the retina’s surface contracts and pulls the retina away from the back of the eye</li>
+                <li><strong>Exudative Retinal Detachment:</strong>Caused by fluid leaking under the retina without any tears or breaks.</li>
+            </p>
+        </div>
+        <button  id="btn3" type="button" class="btn btn-primary">Learn More</button>
+    </div> 
+
+    <div class="box">
+        <img src="static\images\macularedema.jpeg" alt="Image 2">
+        <div class="content"> 
+            <p><strong>Macular Edema</strong></p>
+            <p>
+                <li><strong>Retinitis Pigmentosa (RP):</strong>A group of genetic disorders causing retinal degeneration and progressive vision loss, often starting with night blindness.</li>
+                    <li><strong>Stargardt Disease:</strong>A genetic disorder leading to macular degeneration in young people, causing central vision loss.</li>
+            </p>
+        </div>
+        <button  id="btn4" type="button" class="btn btn-primary">Learn More</button>
+    </div> 
+
+
 </div>   
 
     
 <div id="treatment" class="treatcontainer">
     <div class="upper-row">
         <h1>Treatment </h1>
-        <div class="matter" ><p>Glaucoma is a lifelong eye ailment that can lead to vision loss if not detected in time and managed well. Glaucoma does not necessarily lead to blindness. It can be managed with modern treatment. Treatment cannot restore lost vision, however, it can be prevented from further loss.
-            <br><strong>For diagnosis and treatment of glaucoma, we have an experienced team of specialists and the latest technology</strong></p></div>
+        <div class="matter" >
+            <p>For diagnosis and treatment of Retinal Disorders, we have an experienced team of specialists and the latest technology</p></div>
     </div>
     <div class="bottom-row">
         <div class="small-div">
@@ -320,7 +342,7 @@ With angle-closure glaucoma, the iris is not as wide and open as it should be. T
             </div>    
             <div>  
                 <br>
-                Humphrey Filed Analyser
+                Fundus Photography
             </div>
         </div>
         <div class="small-div">
@@ -344,7 +366,7 @@ With angle-closure glaucoma, the iris is not as wide and open as it should be. T
             </div>
             <div>  
                 <br>
-                Stereoscopic Disc Photography
+                Fluorescein Angiography
             </div>
         </div>
         <div class="small-div">
@@ -356,7 +378,7 @@ With angle-closure glaucoma, the iris is not as wide and open as it should be. T
             </div>
             <div>  
                 <br>
-                Perkins Tonometer
+                Ultrasound B-Scan
             </div>
         </div>
         <div class="small-div">
@@ -369,7 +391,7 @@ With angle-closure glaucoma, the iris is not as wide and open as it should be. T
             <div>  
                 <br>
                 
-Ultra Sound Bio-microscopy
+                Fundus Autofluorescence (FAF)
             </div>
         </div>
     </div>
@@ -397,6 +419,13 @@ Ultra Sound Bio-microscopy
     };
 
     document.getElementById("btn2").onclick = function() {
+        this.style.display = "none";
+    };
+    document.getElementById("btn3").onclick = function() {
+        this.style.display = "none";
+    };
+
+    document.getElementById("btn4").onclick = function() {
         this.style.display = "none";
     };
 </script>

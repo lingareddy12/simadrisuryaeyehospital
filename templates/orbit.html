@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glaucoma Disease Information</title>
+    <title>Orbit & Oculoplasty</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
 
-        
-    
+      
+
+          body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+      
+
+        #logo{
+            width: 50px;
+        } 
+
         #header{
             text-align: center;
             background-color: pink;
@@ -46,14 +57,14 @@
             display: flex;
             justify-content: space-between;
             gap: 40px; /* Gap between boxes */
-            padding:10px 50px 10px 50px;
+            padding:10px 120px 10px 120px;
             font-size: 20px; 
             background-color:#99cfe0;
         }
 
         .symptom,.risk{ 
-            width:40%;
-            padding:10px;
+            width:50%;
+            padding:20px;
         }
 
         .typescontainer {
@@ -71,7 +82,7 @@
         }
         .box img {
             width: 80%;
-            height: auto;
+            height: 300px;
             display: block;
             margin-bottom: 10px;
         }
@@ -161,7 +172,7 @@
             }
         
             .matter {
-                padding: 20px 0px 20px 0px;
+                padding: 30px 20px 10px 20px;
             }
         
             .upper-row {
@@ -176,32 +187,40 @@
                 align-items:center;
                 padding:0px;
                 
-            }
+            }  
 
             .symptom,.risk{ 
                 width:100%;
-                padding:5px; 
+                padding:5px;
                 display:flex;
                 flex-direction:column;
-                align-items:center;
                 justify-content:center;
+                align-items:center;
               
             }
 
             .typescontainer {
                 display:flex;
                 flex-direction:column;
-                font-size:16px;
+                font-size:14px;
                 justify-content:center;
                 align-items:center;
                 gap:20px;
                 padding:0px;
                 
             } 
-            .box{
+            .box{ 
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
                
                 width:100%;
                 padding:0px;
+            } 
+            .box img{
+                width:200px;
+                height:200px;
             }
         }
 
@@ -210,27 +229,29 @@
     </style>
 </head>
 <body>
+
     {% include "header.html" %}
-
-
-
-
+    
+                
     <div id='header'>
-        <h1>What is Glaucoma ?</h1>
+        <h1>What is Orbit Oculoplasty Surgery?</h1>
     </div>
 
     <div class="container col-xxl-8 px-1 py-3">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
-            <img src="/static/images/glaucoma.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            <img src="static\images\orbit.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
           </div>
           <div class="col-lg-6">
-            <p class="lead">Glaucoma is the second leading cause of irreversible blindness worldwide. Glaucoma has been called the “silent thief of sight” as it has no apparent symptoms.
-            Glaucoma is the name given to a group of eye diseases where vision is lost due to damage to the optic nerve. Glaucoma has been called the “silent thief of sight,” because the most common type, primary open-angle glaucoma, has no symptoms until it reaches an advanced stage when vision loss becomes apparent.
-            Without treatment, people with glaucoma slowly lose their peripheral (side) vision until they seem to be looking through a tunnel. Over time, central vision may worsen until no vision remains.</p>
+            <p class="lead">Orbit oculoplasty disorders refer to a range of medical conditions and diseases affecting the orbit (the bony cavity containing the eye), the eyelids, and the surrounding structures. Oculoplastic surgery, also known as ophthalmic plastic and reconstructive surgery, is a specialized branch of ophthalmology that deals with the diagnosis and surgical treatment of these disorders</p>
           </div>
         </div>
       </div>
+
+
+
+
+
 
     
 <div class="riskcontainer"> 
@@ -238,67 +259,62 @@
         <h1>Who are at Risk .. ?</h1>
         <div class="content">
                 <li>People over 60</li>
-                <li>Family members with glaucoma</li>
-                <li>Steroid users</li>
-                <li>Eye injury</li>
-     <strong>Other possible risk factors include:</strong>
-                <li>High myopia (nearsightedness)</li>
-                <li>Hypertension</li>
+                <li>People having Autoimmune Disorders</li>
+                <li>People having Thyroid Disease</li>
+                <li>people having Eye/Facial injuries</li>
+                <li>People with diabetes </li>
         </div>
     </div>
     <div class="symptom">
         <div class="content"> 
             <h1>Symptoms</h1>
         
-                <li>Eye pain or pressure</li>
-                <li>Headaches</li>
-                <li>Rainbow-colored halos around lights</li>
-                <li>Low vision, blurred vision</li>
-                <li>Nausea and vomiting</li>
-                <li>Red eyes</li>
+                <li>Drooping of the upper eyelid</li>
+                <li> Painless lump or swelling on the eyelid.</li>
+                <li>Pain, swelling</li>
+                <li>Excessive tearing</li>
+                <li>Bulging eyes.</li>
+                <li>nward turning of the eyelid.</li>
         </div>
 
     </div> 
 </div>
 
 
-<div id="aboutus" class="reasoncontainer">
-    <div class="upper-row">
-        <h1>Reason for Glaucoma</h1>
-        <div class="matter" >There is no particular reason for glaucoma. But it is affected by many factors. The most significant one is intraocular eye pressure. Our eyes produce a fluid called aqueous humor for nourishing the eyes. This liquid flows through the pupil to the front of the eye. In a healthy eye, the fluid leaves through a drainage canal located between the iris and cornea.
-            But if you have glaucoma, the drainage canals become blocked with microscopic deposits. The fluid with its natural drainage blocked builds up in the eye. This excess fluid puts pressure on the eye. If untreated, this elevated eye pressure can damage the optic nerve.</div>
-    </div>
-</div>
+
 
 <div id="ourtrusts" style="justify-content:center;display: flex;font-family: Georgia, serif;">
-    <h1>Major types of Glaucoma</h1>
+    <h1>Major types of Orbit & Oculoplasty Disorders</h1>
 </div>
 <div class="typescontainer"> 
     <div class="box">
-        <img src="static/images\openglaucoma.jpg" alt="Image 1">
+        <img src="static\images\eyelid.jpeg" alt="Image 1">
         <div class="content">
-            <p><strong>Primary Open-Angle Glaucomap</strong></p>
-            <p>Primary Open-Angle Glaucoma (POAG) is the most common form of glaucoma, affecting about three million Americans. It happens when the eye’s drainage canals become clogged over time.
-                The inner eye pressure (also called intraocular pressure or IOP) rises because the correct amount of fluid can’t drain out of the eye. With open-angle glaucoma, the entrances to the drainage canals 
-                are clear and should be working correctly. The clogging problem occurs further inside the drainage canals, similar to a clogged pipe below the drain in a sink.
-                Most people have no symptoms and no early warning signs. If open-angle glaucoma is not diagnosed and treated, it can cause a gradual loss of vision. This type 
-                of glaucoma develops slowly and sometimes without noticeable sight loss for many years. It usually responds well to medication, especially if caught early and treated.
-                </p>
-        </div>
-        <button id="btn1" class="btn">Learn More</button>
-    </div>
-    <div class="box">
-        <img src="static/images\angleglaucoma.jpg" alt="Image 2">
-        <div class="content"> 
-            <p><strong>Angle-Closure Glaucoma</strong></p>
-            <p>
-                Angle-closure glaucoma is a type of glaucoma where the iris bulges. The bulging iris partially or completely blocks the drainage angle and as a result, fluid can’t circulate through the eye and pressure increases.
-                Angle-closure glaucoma can take the form of acute angle-closure glaucoma or narrow-angle glaucoma. You may also hear people refer to angle-closure glaucoma as closed-angle glaucoma. It may occur suddenly or gradually. Closed-angle glaucoma is much more rare and is very different from open-angle glaucoma, in that the eye pressure usually rises very quickly.
-
-With angle-closure glaucoma, the iris is not as wide and open as it should be. The outer edge of the iris bunches up over the drainage canals, when the pupil enlarges too much or too quickly. This can happen when entering a dark room. A simple test can be used to see if your angle is normal and wide or abnormal and narrow.
+            <h2>Eyelid Disorders</h2>
+            <p> 
+                <li><strong>Ptosis:</strong> Drooping of the upper eyelid, which can affect vision.</li>
+                <li><strong>Entropion:</strong>  Inward turning of the eyelid, causing irritation as eyelashes rub against the eye.</li>
+                <li><strong>Ectropion:</strong>  Outward turning of the eyelid, leading to exposure and drying of the eye.</li>
+                <li><strong>Blepharitis: </strong> Inflammation of the eyelids, often with redness, swelling, and crusting.</li>
+                <li><strong>Eyelid Tumors:</strong>  Benign or malignant growths on the eyelids.</li>
+                
             </p>
         </div>
-        <button  id="btn2" type="button" class="btn btn-primary">Learn More</button>
+        <button  id="btn1" class="btn">Learn More</button>
+    </div>
+    <div class="box">
+        <img src="static\images\orbital.jpeg" alt="Image 2">
+        <div class="content"> 
+            <h2>Orbital Disorders</h2>
+            <p>
+               <li><strong>Orbital Fractures:</strong>Breaks in the bones surrounding the eye, often due to trauma.</li>
+               <li><strong>Orbital Tumors:</strong>Growths in the orbit, which can be benign (e.g., hemangioma) or malignant (e.g., orbital lymphoma).</li>
+               <li><strong>Thyroid Eye Disease (Graves' Ophthalmopathy):</strong>An autoimmune condition causing inflammation and swelling in the orbit.</li>
+               <li><strong>Orbital Cellulitis:</strong>A serious infection of the tissues around the eye, causing pain, redness, and swelling.</li>
+              
+            </p>
+        </div>
+        <button type="button" id="btn2" class="btn btn-primary">Learn More</button>
 
     </div> 
 </div>   
@@ -307,8 +323,8 @@ With angle-closure glaucoma, the iris is not as wide and open as it should be. T
 <div id="treatment" class="treatcontainer">
     <div class="upper-row">
         <h1>Treatment </h1>
-        <div class="matter" ><p>Glaucoma is a lifelong eye ailment that can lead to vision loss if not detected in time and managed well. Glaucoma does not necessarily lead to blindness. It can be managed with modern treatment. Treatment cannot restore lost vision, however, it can be prevented from further loss.
-            <br><strong>For diagnosis and treatment of glaucoma, we have an experienced team of specialists and the latest technology</strong></p></div>
+        <div class="matter" ><p>
+            <strong>For diagnosis and treatment of Orbit & Oculoplasty Disorders, we have an experienced team of specialists and the latest technology</strong></div>
     </div>
     <div class="bottom-row">
         <div class="small-div">
@@ -320,7 +336,7 @@ With angle-closure glaucoma, the iris is not as wide and open as it should be. T
             </div>    
             <div>  
                 <br>
-                Humphrey Filed Analyser
+                Slit Lamp Biomicroscope
             </div>
         </div>
         <div class="small-div">
@@ -332,7 +348,7 @@ With angle-closure glaucoma, the iris is not as wide and open as it should be. T
             </div>
             <div>  
                 <br>
-                Optical Coherence Tomography
+                Ophthalmoscope
             </div>
         </div>
         <div class="small-div">
@@ -344,7 +360,7 @@ With angle-closure glaucoma, the iris is not as wide and open as it should be. T
             </div>
             <div>  
                 <br>
-                Stereoscopic Disc Photography
+                Computed Tomography (CT) Scan
             </div>
         </div>
         <div class="small-div">
@@ -356,7 +372,7 @@ With angle-closure glaucoma, the iris is not as wide and open as it should be. T
             </div>
             <div>  
                 <br>
-                Perkins Tonometer
+                Cryotherapy Equipment
             </div>
         </div>
         <div class="small-div">
@@ -369,7 +385,7 @@ With angle-closure glaucoma, the iris is not as wide and open as it should be. T
             <div>  
                 <br>
                 
-Ultra Sound Bio-microscopy
+                Endoscopic Equipment
             </div>
         </div>
     </div>
@@ -389,7 +405,7 @@ Ultra Sound Bio-microscopy
   </div>
 
 
-</body>
+</body>  
 
 <script>
     document.getElementById("btn1").onclick = function() {

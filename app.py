@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, redirect, url_for,flash
 import psycopg2
-from psycopg2.extras import DictCursor
+
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'  
@@ -60,6 +60,15 @@ def research():
 @app.route('/Cataract',methods=['GET','POST'])
 def cataract(): 
     return render_template('cataract.html')
+
+@app.route('/Retina',methods=['GET','POST'])
+def retina(): 
+    return render_template('retina.html')
+
+
+@app.route('/Orbit & Oculoplasty',methods=['GET','POST'])
+def orbit(): 
+    return render_template('orbit.html')
 
 
 

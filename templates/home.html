@@ -365,25 +365,33 @@
             margin-bottom: 40px;
             color: #333;
         }
-        
         .services-container {
+            display:flex;
+            flex-direction:column;
+        }
+        
+        .row1,.row2{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            margin:20px;
+            gap: 40px;
         }
         
-        .service-card {
+        .service-card { 
+          
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 10px;
-            width: 300px;
+            width: 400px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             background-color:#d3d3d3;
         }
-        
+     
+       
+           
         .service-card img {
             width: 100%;
             height: 200px;
@@ -405,7 +413,7 @@
         }
         
         .service-card:hover {
-            transform: translateY(-40px);
+            transform: translateY(-20px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
             background-color:#99cfe0;
         }
@@ -427,6 +435,8 @@
     height: calc(100vh - 100px);
             
         } 
+
+       
   
         
         
@@ -460,7 +470,7 @@
 <div class="services-section">
     <h2>What We Offer</h2>
     <div class="services-container">
-
+    <div class="row1">
         <div class="service-card">
             <img src="/static/images/glasses.jpeg" alt="Service 2">
             <h3>OPTICALS</h3>
@@ -476,12 +486,24 @@
             <h3>GLAUCOMA</h3>
             <p>We offer comprehensive glaucoma management, including advanced diagnostics, medical therapy, laser treatments, and surgical interventions such as trabeculectomy and drainage implant surgery. Our personalized care and state-of-the-art techniques aim to preserve your vision and maintain your quality of life.</p>
         </div>
+    </div>
+    <div class="row2">
         <div class="service-card">
             <img src="/static/images/cornea.jpeg" alt="Service 1">
             <h3>CORNEA</h3>
             <p>We provide comprehensive corneal care, including advanced diagnostics, medical treatments, and surgical procedures. Our services include corneal transplants, treatment for keratoconus, and management of corneal infections and dystrophies. We are committed to preserving your vision with personalized care and the latest medical techniques.</p>
         </div>
-        <!-- Add more service cards as needed -->
+        <div class="service-card">
+            <img src="/static/images/orbit.png" alt="Service 2">
+            <h3>ORBIT OCULOPASTY SURGERY</h3>
+            <p>We offer comprehensive care for conditions affecting the eyelids, orbit, tear drainage system, and surrounding structures, using the latest techniques and advanced technology to ensure the best possible outcomes for our patients</p>
+        </div>
+        <div class="service-card">
+            <img src="/static/images/orbit.png" alt="Service 2">
+            <h3>ORBIT OCULOPASTY SURGERY</h3>
+            <p>We offer comprehensive care for conditions affecting the eyelids, orbit, tear drainage system, and surrounding structures, using the latest techniques and advanced technology to ensure the best possible outcomes for our patients</p>
+        </div>
+    </div>
     </div>
 </div> 
 
