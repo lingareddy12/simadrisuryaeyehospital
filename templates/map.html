@@ -133,10 +133,7 @@
     
    
 
-    <div id="map" class="map-container">
-        <h2 class="h2heading">Locate Our Camps</h2>
-        <iframe src="https://www.google.com/maps/d/embed?mid=16HWifFkeD6zLlXrt9S20_wQc5Hh_RNA&ehbc=2E312F&noprof=1" width="1550" height="680"></iframe>
-    </div>  
+   
 
     <div class="Observation">
         <h2 class="h2heading">Observations from our first camps</h2>
@@ -208,89 +205,13 @@
 
 {% include 'timeline.html'%}
 
-{% include 'data.html'%}
+<div id="map" class="map-container">
+    <h2 class="h2heading">Locate Our Camps</h2>
+    <iframe src="https://www.google.com/maps/d/embed?mid=16HWifFkeD6zLlXrt9S20_wQc5Hh_RNA&ehbc=2E312F&noprof=1" width="1550" height="680"></iframe>
+</div>  
 
-   
-<div class="chart-container">
-    <div class="chart-box">
-        <canvas id="singleBarChart"></canvas>
-    </div>
-    <div class="chart-box">
-        <canvas id="doubleBarChart"></canvas>
-    </div>
-</div>
 
-<!-- Chart.js Library -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    const singleBarCtx = document.getElementById('singleBarChart').getContext('2d');
-    const doubleBarCtx = document.getElementById('doubleBarChart').getContext('2d');
 
-    const singleBarChart = new Chart(singleBarCtx, {
-        type: 'bar',
-        data: {
-            labels: ['Cataract', 'Cornea', 'Retina', 'Orbit'],
-            datasets: [
-                {
-                    label: 'Surgeries',
-                    data: [221,5,5,6],
-                    backgroundColor: 'rgba(75, 192, 192, 0.5)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 1
-                }
-            ]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            },
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                }
-            }
-        }
-    });
-
-    const doubleBarChart = new Chart(doubleBarCtx, {
-        type: 'bar',
-        data: {
-            labels: ['Cataract', 'Cornea', 'Retina', 'Orbit'],
-            datasets: [
-                {
-                    label: 'Men',
-                    data: [88,2,3,0],
-                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    borderWidth: 1
-                },
-                {
-                    label: 'Women',
-                    data: [133,3,2,6],
-                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    borderWidth: 1
-                }
-            ]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            },
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                }
-            }
-        }
-    });
-</script>
 
 
 

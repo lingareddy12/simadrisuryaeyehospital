@@ -65,6 +65,10 @@ def cataract():
 def retina(): 
     return render_template('retina.html')
 
+@app.route('/Statistics',methods=['GET','POST'])
+def statistics(): 
+    return render_template('data.html')
+
 
 @app.route('/Orbit & Oculoplasty',methods=['GET','POST'])
 def orbit(): 
