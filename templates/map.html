@@ -15,6 +15,8 @@
             margin: 0;
         }
 
+        
+
         .h2heading{
             background-color:pink;
             text-align: center;
@@ -64,7 +66,8 @@
         }
         
         .card {
-            border-radius: 8px;
+            border-radius: 8px; 
+            height:80px;
             transition: transform 0.1s;
         }
         
@@ -137,6 +140,7 @@
 
     <div class="Observation">
         <h2 class="h2heading">Observations from our first camps</h2>
+    </div>
     <div class="container mb-5">
         <div class="row">
             <div class="col-md-6">
@@ -185,7 +189,7 @@
                 </div>
                 <div class="card bg-green-light mb-3">
                     <div class="card-body">
-                        <p class="card-text">Building trust and providing reassurance will help overcome the barrier.</p>
+                        <p class="card-text">Building trust & providing reassurance will help overcome the barrier.</p>
                     </div>
                 </div>
                 <div class="card bg-green-light mb-3">
@@ -202,6 +206,12 @@
         </div>
     </div> 
 </div>  
+
+<div class="Observation">
+    <h2 class="h2heading">Strategies Implemented</h2>
+</div>
+
+{% include 'Strategies.html'%}
 
 {% include 'timeline.html'%}
 

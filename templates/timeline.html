@@ -14,12 +14,12 @@
             background: rgba(245, 245, 245);
         }
 
-        h1 {
+        .timeline-container h1 {
             text-align: center;
             margin-bottom: 2rem;
         }
 
-        ul {
+        .timeline-container ul {
             display: grid;
             grid-template-columns: 0.25rem 1fr;
             column-gap: 2rem;
@@ -29,7 +29,7 @@
             position: relative;
         }
 
-        ul::before {
+        .timeline-container ul::before {
             content: "";
             grid-column: 1;
             grid-row: 1 / span 20;
@@ -37,22 +37,22 @@
             border-radius: 0.125rem;
         }
 
-        ul li {
+        .timeline-container ul li {
             display: grid;
             grid-template-rows: min-content min-content;
             margin: 2rem 1.5rem; /* Added margin */
         }
 
-        ul li:nth-child(odd) {
+        .timeline-container ul li:nth-child(odd) {
             grid-column: 2;
         }
 
-        ul li:nth-child(even) {
+        .timeline-container ul li:nth-child(even) {
             grid-column: 1;
             justify-self: end;
         }
 
-        ul li .date {
+        .timeline-container ul li .date {
             height: 3rem;
             text-align: center;
             background-color: var(--accent-color);
@@ -66,11 +66,11 @@
             position: relative;
         }
 
-        ul li:nth-child(even) .date {
+        .timeline-container ul li:nth-child(even) .date {
             border-radius: 0 1.5rem 1.5rem 0;
         }
 
-        ul li .date::before {
+        .timeline-container ul li .date::before {
             content: "";
             width: 1.5rem;
             height: 1.5rem;
@@ -81,13 +81,13 @@
             clip-path: polygon(0 0, 100% 0, 0 100%);
         }
 
-        ul li:nth-child(even) .date::before {
+        .timeline-container ul li:nth-child(even) .date::before {
             clip-path: polygon(0 0, 100% 0, 100% 100%);
             right: auto;
             left: 0;
         }
 
-        ul li .date::after {
+        .timeline-container ul li .date::after {
             content: "";
             width: 2rem;
             height: 2rem;
@@ -100,12 +100,12 @@
             right: calc(100% + 2rem + 0.125rem);
         }
 
-        ul li:nth-child(even) .date::after {
+        .timeline-container ul li:nth-child(even) .date::after {
             transform: translate(-50%, -50%);
             left: calc(100% + 2rem + 0.125rem);
         }
 
-        ul li img {
+        .timeline-container ul li img {
             width: 100%;
             max-width: 100%;
             height: auto;
@@ -114,19 +114,19 @@
         }
 
         @media (min-width: 10rem) {
-            ul {
+            .timeline-container  ul {
                 grid-template-columns: 1fr 0.25rem 1fr;
             }
-            ul::before {
+            .timeline-container ul::before {
                 grid-column: 2;
             }
-            ul li:nth-child(odd) {
+            .timeline-container ul li:nth-child(odd) {
                 grid-column: 3;
             }
-            ul li:nth-child(even) {
+            .timeline-container ul li:nth-child(even) {
                 grid-column: 1;
             }
-            ul li .date {
+            .timeline-container ul li .date {
                
                 font-size: 8px;
             }

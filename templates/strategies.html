@@ -1,0 +1,76 @@
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .slider {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .slider-wrapper {
+        display: flex;
+        width: calc(100%*2); /* Adjust based on the number of images */
+        animation: slide 20s infinite linear;
+    }
+
+    .slider-wrapper img {
+        height: 300px; /* Set the height of the images */
+        width: auto; /* Ensure each image takes the full container width */
+        flex: 0 0 8%; /* Adjust based on the number of images */
+        margin:10px;
+        border-radius:10px;
+        border-color:;
+    }
+    .slider-wrapper img:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+        background-color:#99cfe0;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+</style>
+
+<body>
+<div class="slider"> 
+    <br>
+    <div class="slider-wrapper">
+        <img src="/static/images/strat1.png" alt="Image 1">
+        <img src="/static/images/strat2.png" alt="Image 2">
+        <img src="/static/images/strat3.png" alt="Image 2">
+        <img src="/static/images/strat4.png" alt="Image 3">
+        <img src="/static/images/strat5.png" alt="Image 4">
+        <img src="/static/images/strat6.png" alt="Image 3">
+        <img src="/static/images/strat7.png" alt="Image 4">
+        <img src="/static/images/strat1.png" alt="Image 1">
+        <img src="/static/images/strat2.png" alt="Image 3">
+        <img src="/static/images/strat3.png" alt="Image 4">
+        <img src="/static/images/strat4.png" alt="Image 3">
+        <img src="/static/images/strat5.png" alt="Image 4">
+        
+        <!-- Duplicate images for seamless transition -->
+    </div>
+</div>
+
+<script>
+    document.querySelector('.slider-wrapper').addEventListener('mouseover', () => {
+        document.querySelector('.slider-wrapper').style.animationPlayState = 'paused';
+    });
+
+    document.querySelector('.slider-wrapper').addEventListener('mouseout', () => {
+        document.querySelector('.slider-wrapper').style.animationPlayState = 'running';
+    });
+</script>
+</body>
+

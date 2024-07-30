@@ -423,29 +423,21 @@ img {
                 <p>The project titled " A Novel Hardware Embedded Multivariate Feature Enabled Health Monitoring System for Early Diagnosis of Glaucoma" has been sanctioned by “Science and Engineering Research Board (SERB)” for funding to the tune of Rs.50,49,484/- having File Number: CRG/2023/005474. Status: On Going.
                     </p>
             </div>
-            <button class="btn">Learn More</button>
+            <button id="btn1" class="btn btn-primary">View More</button>
         </div>
         <div class="box">
           
             <div class="content"> 
-                <p><strong>Parallel Convolutional Graph Attention U-Net for Retinal Fluid segmentation</strong></p>
+                <p><strong>A robust segmentation of retinal fluids from OCT images using MCFAR-net</strong></p>
                 <p>
-                    
+                    This paper presents a novel architecture to detect Macular Edema (ME) in Optical Coherence Tomography (OCT) images that occurs due to high fluid accumulation between the retinal layers of the eye. These excessive fluids have swollen the macular region and may result in visual impairments. To alleviate this problem in its early stage, the proposed model, Multiscale Context Enhancive Aggregation & Refinement Network (MCFAR-Net) is implemented to detect these fluids enabling the prevention of visual loss. 
                 </p>
+                <button class="btn btn-primary" onclick="window.open('https://www.sciencedirect.com/science/article/abs/pii/S0925231224008300 ', '_blank')">Learn More</button>
             </div>
-            <button type="button" class="btn btn-primary">Learn More</button>
+            <button id="btn2" type="button" class="btn btn-primary">View More</button>
     
         </div> 
-        <div class="box">
-          
-            <div class="content"> 
-                <p><strong>Analysis of Retinal Disorder using Artificial Intelligence</strong></p>
-                <p>
-                   
-                </p>
-            </div>
-            <button type="button" class="btn btn-primary">Learn More</button>
-        </div> 
+      
     </div>   
 
     <div style="color:pink;text-align:center;font-family: Georgia, serif;">
@@ -494,7 +486,7 @@ img {
         <span class="dot" onclick="currentSlide(4)"></span>  
         <span class="dot" onclick="currentSlide(5)"></span>
         <span class="dot" onclick="currentSlide(6)"></span>  
-    </div>
+    </div>   
     
     <script>
         let slideIndex = 0;
@@ -566,8 +558,19 @@ img {
             const box = this.parentElement;
             box.classList.toggle('show');
         });
-    });
-</script>
+    });  
+
+    document.getElementById("btn1").onclick = function() {
+        this.style.display = "none";
+    };
+
+
+    document.getElementById("btn2").onclick = function() {
+        this.style.display = "none";
+    };
+   
+</script> 
+ 
 
 
 </html>
