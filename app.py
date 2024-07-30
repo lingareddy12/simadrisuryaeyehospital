@@ -45,7 +45,7 @@ def index():
 
 @app.route('/aboutus',methods=['GET','POST'])
 def aboutus(): 
-    return render_template('index.html')
+    return render_template('aboutus.html')
 
 @app.route('/Glaucoma',methods=['GET','POST'])
 def glaucoma(): 
@@ -83,6 +83,10 @@ def camp():
 @app.route('/team',methods=['GET','POST'])
 def team(): 
     return render_template('team.html')
+
+@app.route('/donate',methods=['GET','POST'])
+def donate(): 
+    return render_template('donations.html')
 
 
 

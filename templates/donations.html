@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Vision Care</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+       
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    
+        .header {
+            text-align:center; 
+            margin-bottom: 20px;
+            margin-top:20px;
+        }
+        .header h1 {
+            color: #007bff;
+            font-size: 48px;
+            margin: 0;
+        }
+      
+      
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin: 10px 0;
+            text-align: left;
+        }
+        .card p {
+            margin: 0 0 10px;
+            font-size: 16px;
+        }
+        .card .label {
+            font-weight: bold;
+            color: #555;
+        }
+        .card:hover{
+            background-color:  pink;
+        }
+      
+       
+
+        .aboutcontainer { 
+            font-family: Georgia, serif;
+            max-width:100%;
+            padding: 20px;
+            
+        }
+        .aboutcontainer h2{
+            font-size:38px; 
+            
+        }
+        
+        .upper-row {
+            background-color: #e9f5ff;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 18px; 
+            font-family: Georgia, serif;
+            max-width:100%;
+            
+        } 
+
+        .motivation {
+            text-align:center;
+            padding:20px;
+            font-size:20px;
+        }
+
+        .details{
+            margin:0 60px;
+            padding:30px ;
+            border: 6px solid pink;
+
+        }
+    </style>
+</head>
+<body>
+
+    {% include 'header.html' %}
+
+        <div class="header">
+            <h1>Help Us Make a Difference</h1>
+        </div>
+
+        <div class="aboutcontainer">
+            <div class="upper-row">
+               
+                <div class="matter" ><h2>Your Support Transforms Lives</h2>
+                    <p>Imagine a world where every person has the gift of sight. For many, this is not just a dream but a reality waiting to be unlocked. Your generous donation can help us provide essential eye care services to those in need, ensuring that more people can experience the beauty of the world around them.</p>
+                    <p>Every contribution, big or small, brings us closer to a future where everyone has access to the vision care they deserve. By supporting our cause, you are not only changing lives but also creating a brighter, more hopeful future for countless individuals.</p>
+                    <p>Join us in our mission to help those who need it most. Together, we can make vision care accessible to everyone and give the gift of sight to those who have never seen it. Your kindness will light up lives and restore hope.</p></div>
+            </div>
+        </div> 
+
+        <div class="motivation">
+            <h1>Donate Through Bank Transfer</h1>
+            <p>You can make a donation through a bank transfer using the details below:</p>
+        </div>
+    <div class="details">
+        <div class="card">
+            <p><span class="label"><strong>Bank Name:</strong></span> State Bank of India</p>
+        </div>
+        <div class="card">
+            <p><span class="label"><strong>IFSC Code:</strong></span> SBIN0012099</p>
+        </div>
+        <div class="card">
+            <p><span class="label"><strong>Account Number:</strong></span> 42729023008</p>
+        </div>
+        <div class="card">
+            <p><span class="label"><strong>Account Holder Name:</strong></span> Simadri Surya Eye Hospital</p>
+        </div>
+        <div class="card">
+            <p><span class="label"><strong>Bank Address:</strong></span> Nowrangapur Bazar, Near Block Office Main Road Gadabaguda, Nowrangapur District, Odisha 764059</p>
+        </div>
+        <div class="footer">
+            For any queries, please contact us at <a href="mailto:info@example.com">info@example.com</a>.
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+
+
+</body>
+</html>

@@ -1,6 +1,5 @@
 
-
-    <style>  
+    <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
         .timeline-container {
@@ -21,7 +20,7 @@
 
         .timeline-container ul {
             display: grid;
-            grid-template-columns: 0.25rem 1fr;
+            grid-template-columns: 1fr 0.25rem 1fr;
             column-gap: 2rem;
             list-style: none;
             width: min(60rem, 90%);
@@ -31,7 +30,7 @@
 
         .timeline-container ul::before {
             content: "";
-            grid-column: 1;
+            grid-column: 2;
             grid-row: 1 / span 20;
             background: rgb(225, 225, 225);
             border-radius: 0.125rem;
@@ -40,24 +39,24 @@
         .timeline-container ul li {
             display: grid;
             grid-template-rows: min-content min-content;
-            margin: 2rem 1.5rem; /* Added margin */
+            margin: 2rem 1.5rem;
         }
 
         .timeline-container ul li:nth-child(odd) {
-            grid-column: 2;
+            grid-column: 3;
         }
 
         .timeline-container ul li:nth-child(even) {
             grid-column: 1;
-            justify-self: end;
         }
 
         .timeline-container ul li .date {
-            height: 3rem;
+            height: auto;
+            padding: 0.5rem;
             text-align: center;
             background-color: var(--accent-color);
             color: white;
-            font-size: 12px;
+            font-size: 18px;
             font-weight: 700;
             display: flex;
             align-items: center;
@@ -113,9 +112,9 @@
             margin: 0 auto;
         }
 
-        @media (min-width: 10rem) {
-            .timeline-container  ul {
-                grid-template-columns: 1fr 0.25rem 1fr;
+        @media (max-width: 768px) {
+            .timeline-container ul {
+                grid-template-columns: 2fr 0.1rem 2fr;
             }
             .timeline-container ul::before {
                 grid-column: 2;
@@ -127,14 +126,36 @@
                 grid-column: 1;
             }
             .timeline-container ul li .date {
-               
-                font-size: 8px;
+                font-size: 10px;
+                padding: 0.25rem;
             }
+          
         }
 
-     
-
-      
+        @media (max-width: 480px) {
+            .timeline-container ul {
+                grid-template-columns: 0.2fr;
+            }
+            .timeline-container ul::before {
+                display: none;
+            }
+            .timeline-container ul li {
+                grid-column: 1;
+                justify-self: center;
+                margin: 1rem 0;
+            }
+            .timeline-container ul li .date {
+                font-size: 10px;
+                padding: 0.25rem 0.5rem;
+            }
+            .timeline-container ul li .date::after {
+                display: none;
+            } 
+            .timeline-container img{
+                width:200px; 
+                height:200px;
+            }
+        }
     </style>
 
 <body>
@@ -175,8 +196,7 @@
                 <img src="/static/images/t8.png" alt="Image 8">
             </li>
         </ul>
-       
     </div>
-   
+
 </body>
 

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,106 +6,87 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chartjs Data Labels Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
     <style>
+        .title {
+            width: 100%;
+            display: inline-block;
+            color: #000;
+            text-align: center;
+        }
+        .title h5 {
+            margin-bottom: 30px;
+        }
+        .title p {
+            font-size: 13px;
+            line-height: 22px;
+        }
+        .row1 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            gap: 20px;
+            margin: 5px;
+        }
+        .counter-box {
+            width: 100%;
+            height: 100%;
+            background: #12192c;
+            padding: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px -4px #66676c;
+            color: #fff;
+            text-align: center;
+        }
+        .counter-box .fa {
+            font-size: 40px;
+            color: rgba(16, 211, 97, 0.603);
+            display: block;
+        }
+        .counter-box:hover {
+            transform: scale(1.05);
+            background-color: pink;
+        }
 
-.title{
-    width: 100%;
-    display: inline-block;
-   
-    color: #000;
-    text-align: center;
-}
-.title h5{
-    margin-bottom: 30px;
-}
-.title p{
-    font-size: 13px;
-    line-height: 22px;
-}
+        /* Media queries for mobile responsiveness */
+        @media (max-width: 768px) {
+            .row1 {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
 
-.row1{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    gap:20px;
-    margin:5px;
-   
-}
-
-.counter-box{
-    width: 100%;
-    height: 100%;
-    background: #12192c;
-    padding: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 20px -4px #66676c;
-    color:#fff;
-    text-align: center;
-   
-}
-
-.counter-box .fa{
-    font-size: 40px;
-    color: rgba(16, 211, 97, 0.603);
-    display: block;
-}
-
-.counter-box:hover {
-    transform: scale(1.05);
-    background-color:pink;
-}  
-
-
-
-
-
-/* Media queries for mobile responsiveness */
-@media (max-width: 768px) {
-
-    .row1{
-        display:flex;
-        flex-direction:column;
-        gap:20px;
-       
-    }
-
- 
-}
-
-
-.chart-container {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    justify-content:center;
-    width: 100%;
-    backgroundColor:pink;
-    margin:60px 0px 60px 0px;
-}
-.chart-box {
-    width: 40%;
-}
-@media (max-width: 768px) {
-    .chart-container{
-        margin-top:20px;
-        display: flex;
-    flex-direction:column;
-    align-items:center;
-    
-    gap:40px;
-    
-    } 
-
-    .chart-box {
-        width: 80%;
-    }
-} 
-
-
-
-
+        .chart-container {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+           
+            margin: 60px 0;
+        }
+        .chart-box {
+            width: 40%;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+            .chart-box {
+                width: 80%;
+            }
+        }
     </style>
 </head>
 <body> 
@@ -115,138 +95,185 @@
 
     <div class="hero">
         <div class="title">
-            <h1 style="font-size:40px;">Hospital Treatment Statistics</h1> 
-            <h5><strong>24th April 2024 To 9th May 2024</strong> </h5>
+            <h1 style="font-size: 40px;">Hospital Treatment Statistics</h1> 
+            <h5><strong>24th April 2024 To 9th May 2024</strong></h5>
         </div>
         <div class="row1">
-          
-                <div class="counter-box">
-                    <i class="fa fa-BOOK"></i>
-                    <h2 class="counter">1318</h2>
-                    <h3>Total Patients</h3>
-                </div>
-          
-           
-                <div class="counter-box">
-                    <i class="fa fa-BOOK"></i>
-                    <h2 class="counter">1257</h2><span></span>
-                    <h3>Medicines Prescribed</h3>
-                </div>
-         
-            
-                <div class="counter-box">
-                    <i class="fa fa-BOOK"></i>
-                    <h2 class="counter">409</h2>
-                    <h3>Opticals Prescribed</h3>
-                </div>
-         
-          
-                <div class="counter-box">
-                    <i class="fa fa-BOOK"></i>
-                    <h2 class="counter">237</h2>
-                    <h3>Surgeries Performed</h3>
-                </div>
-         
+            <div class="counter-box">
+                <i class="fa fa-book"></i>
+                <h2 class="counter">1318</h2>
+                <h3>Total Patients</h3>
+            </div>
+            <div class="counter-box">
+                <i class="fa fa-book"></i>
+                <h2 class="counter">1257</h2>
+                <h3>Medicines Prescribed</h3>
+            </div>
+            <div class="counter-box">
+                <i class="fa fa-book"></i>
+                <h2 class="counter">409</h2>
+                <h3>Opticals Prescribed</h3>
+            </div>
+            <div class="counter-box">
+                <i class="fa fa-book"></i>
+                <h2 class="counter">237</h2>
+                <h3>Surgeries Performed</h3>
+            </div>
         </div>
-       
     </div>
 
-       
-<div class="chart-container">
-    <div class="chart-box">
-        <canvas id="singleBarChart"></canvas>
-    </div>
-    <div class="chart-box">
-        <canvas id="doubleBarChart"></canvas>
-    </div>
-</div>
+    <div class="chart-container">
+        <div class="chart-box">
+            <canvas id="singleBarChart"></canvas>
+        </div>
+        <div class="chart-box">
+            <canvas id="doubleBarChart"></canvas>
+        </div>
+    </div> 
 
-<!-- Chart.js Library -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    const singleBarCtx = document.getElementById('singleBarChart').getContext('2d');
-    const doubleBarCtx = document.getElementById('doubleBarChart').getContext('2d');
+    {% include 'footer.html' %}
 
-    const singleBarChart = new Chart(singleBarCtx, {
-        type: 'bar',
-        data: {
-            labels: ['Cataract', 'Cornea', 'Retina', 'Orbit'],
-            datasets: [
-                {
-                    label: 'Surgeries',
-                    data: [221,5,5,6],
-                    backgroundColor: 'rgba(75, 192, 192, 0.5)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 1
-                }
-            ]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
+    <!-- Chart.js Library -->
+    <script>
+        const singleBarCtx = document.getElementById('singleBarChart').getContext('2d');
+        const doubleBarCtx = document.getElementById('doubleBarChart').getContext('2d');
+
+        const singleBarChart = new Chart(singleBarCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Cataract', 'Cornea', 'Retina', 'Orbit'],
+                datasets: [
+                    {
+                        label: 'Surgeries',
+                        data: [221, 5, 5, 6],
+                        backgroundColor: 'rgba(75, 192, 192, 0.5)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }
+                ]
             },
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                }
-            }
-        }
-    });
-
-    const doubleBarChart = new Chart(doubleBarCtx, {
-        type: 'bar',
-        data: {
-            labels: ['Cataract', 'Cornea', 'Retina', 'Orbit'],
-            datasets: [
-                {
-                    label: 'Men',
-                    data: [88,2,3,0],
-                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    borderWidth: 1
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
                 },
-                {
-                    label: 'Women',
-                    data: [133,3,2,6],
-                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    borderWidth: 1
-                }
-            ]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    datalabels: {
+                        anchor: 'end',
+                        align: 'top',
+                        color: '#444',
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: (value) => value
+                    }
                 }
             },
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
+            plugins: [ChartDataLabels]
+        });
+
+        const doubleBarChart = new Chart(doubleBarCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Cataract', 'Cornea', 'Retina', 'Orbit'],
+                datasets: [
+                    {
+                        label: 'Men',
+                        data: [88, 2, 3, 0],
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Women',
+                        data: [133, 3, 2, 6],
+                        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    datalabels: {
+                        anchor: 'end',
+                        align: 'top',
+                        color: '#444',
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: (value) => value
+                    }
                 }
-            }
-        }
-    });
-</script>
+            },
+            plugins: [ChartDataLabels]
+        });
+    </script>
+
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="script.js"></script>
     <script>
-
-(function(e){"use strict";e.fn.counterUp=function(t){var n=e.extend({time:400,delay:10},t);return this.each(function(){var t=e(this),r=n,i=function(){var e=[],n=r.time/r.delay,i=t.text(),s=/[0-9]+,[0-9]+/.test(i);i=i.replace(/,/g,"");var o=/^[0-9]+$/.test(i),u=/^[0-9]+\.[0-9]+$/.test(i),a=u?(i.split(".")[1]||[]).length:0;for(var f=n;f>=1;f--){var l=parseInt(i/n*f);u&&(l=parseFloat(i/n*f).toFixed(a));if(s)while(/(\d+)(\d{3})/.test(l.toString()))l=l.toString().replace(/(\d+)(\d{3})/,"$1,$2");e.unshift(l)}t.data("counterup-nums",e);t.text("0");var c=function(){t.text(t.data("counterup-nums").shift());if(t.data("counterup-nums").length)setTimeout(t.data("counterup-func"),r.delay);else{delete t.data("counterup-nums");t.data("counterup-nums",null);t.data("counterup-func",null)}};t.data("counterup-func",c);setTimeout(t.data("counterup-func"),r.delay)};t.waypoint(i,{offset:"100%",triggerOnce:!0})})}})(jQuery);    jQuery(document).ready(function($) {
-    $('.counter').counterUp({
-        delay: 10,
-        time: 1000
-    });
-});
-
-
+        (function(e) {
+            "use strict";
+            e.fn.counterUp = function(t) {
+                var n = e.extend({ time: 400, delay: 10 }, t);
+                return this.each(function() {
+                    var t = e(this),
+                        r = n,
+                        i = function() {
+                            var e = [],
+                                n = r.time / r.delay,
+                                i = t.text(),
+                                s = /[0-9]+,[0-9]+/.test(i);
+                            i = i.replace(/,/g, "");
+                            var o = /^[0-9]+$/.test(i),
+                                u = /^[0-9]+\.[0-9]+$/.test(i),
+                                a = u ? (i.split(".")[1] || []).length : 0;
+                            for (var f = n; f >= 1; f--) {
+                                var l = parseInt(i / n * f);
+                                u && (l = parseFloat(i / n * f).toFixed(a));
+                                if (s) while (/(\d+)(\d{3})/.test(l.toString())) l = l.toString().replace(/(\d+)(\d{3})/, "$1,$2");
+                                e.unshift(l)
+                            }
+                            t.data("counterup-nums", e);
+                            t.text("0");
+                            var c = function() {
+                                t.text(t.data("counterup-nums").shift());
+                                if (t.data("counterup-nums").length) setTimeout(t.data("counterup-func"), r.delay);
+                                else {
+                                    delete t.data("counterup-nums");
+                                    t.data("counterup-nums", null);
+                                    t.data("counterup-func", null)
+                                }
+                            };
+                            t.data("counterup-func", c);
+                            setTimeout(t.data("counterup-func"), r.delay)
+                        };
+                    t.waypoint(i, { offset: "100%", triggerOnce: !0 })
+                })
+            }
+        })(jQuery);
+        jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+        });
     </script>
-
-
  
 </body>
 </html>

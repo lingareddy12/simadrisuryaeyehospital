@@ -22,6 +22,13 @@
             text-align: center;
             font-size: 38px; 
             font-family: Georgia, serif;
+        }  
+
+        .villagelist{
+            background-color:pink;
+            text-align: center;
+            font-size: 8px; 
+            font-family: Georgia, serif;
         }
 
 
@@ -132,15 +139,24 @@
 <body>  
 
     {% include 'header.html'%}
+  
 
+    <div class="villagelist">
+        <h2 >Camp Locations</h2>
+    </div>
+    <br>
+  
     
+   {% include 'villages.html' %}
    
-
+   <br>
    
 
     <div class="Observation">
         <h2 class="h2heading">Observations from our first camps</h2>
     </div>
+    <br>
+  
     <div class="container mb-5">
         <div class="row">
             <div class="col-md-6">
@@ -228,19 +244,7 @@
 
 
 
-<div class="containers">
-    <footer class="py-3 my-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="/hospital/index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Services</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-      </ul>
-      <p class="text-center text-body-secondary">© Happy Days Batch, Inc</p>
-    </footer>
-  </div>
-</div>
+{% include 'footer.html' %}
 
     
 </body> 
