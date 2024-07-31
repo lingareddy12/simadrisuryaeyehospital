@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Compliant Measures - Simadri Surya Eye Hospital</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            max-width:100%;
+            border-radius: 10px;
+           
+            margin-top: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #007BFF;
+            font-size: 24px;
+        }
+
+        .list {
+            padding-left: 20px;
+        }
+
+        .list li {
+            margin-bottom: 10px;
+        }
+        .images{
+            width:100%;
+            display:flex;
+            align-items:center;
+            gap:80px;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    <div class="container">
+        <h1>ESG Compliant Measures</h1>
+        <p>We, at Simadri Surya Eye Hospital, make every effort to reduce wastage and thus reduce the burden on earth. In this regard, we have invested in a good Sterilization System, consisting of a 250 litres Autoclave and a Flash Sterilizer – the primary idea being to minimize the use of disposable instruments and linen for surgeries. Instead, we use instruments that can be sterilized in the sterilizer and can be reused a number of times. Apart from that, we use various linen like doctor gowns, patient gowns, drapes, towels, etc. - all of these are also not disposable ones and are sterilized.</p>
+
+        <p>This helps in two ways: one, it ensures that all items are adequately sterile (as eye care needs a more sterile environment than many other surgeries), and two, it is not heavy on the earth. Thus, for every surgery, we are saving a minimum of 2 kgs of material from being disposed of.</p>
+
+        <h2 class="section-title">Sterilization</h2>
+         
+       
+        <p>The above needs that we take utmost care in sterilization. The procedure followed is detailed below:</p>
+
+        <h3>Equipment Standards</h3>
+        <p>A Class B sterilizer with vacuum and steam pressure cycles, preferably with a 70-liter capacity, is ideal for centers performing 15-20 surgeries daily.</p>
+        <p>Annual checks by a service engineer are mandatory for equipment functionality.</p>
+        <p>The steam sterilizer must maintain:</p>
+        <ul class="list">
+            <li>Temperature: 121∘C for 12-15 minutes or 134∘C for 8-12 minutes.</li>
+            <li>Pressure: 2.2-2.5 Pascals.</li>
+            <li>Cycle Time: Approximately 40-45 minutes per cycle.</li>
+        </ul>
+
+        <h3>Vacuum Cycle</h3>
+        <ul class="list">
+            <li>Pulse Cycle: Three pulses test the solenoid valve for pressure release and vacuum creation.</li>
+            <li>Heating Mode: Slow heating until the chamber reaches the set temperature.</li>
+            <li>Sterilization Mode: Maintaining the temperature at 121∘C for the set duration under 2.2-2.4 Pascals pressure.</li>
+            <li>Drying Mode: After sterilization, the chamber dries, reducing pressure to zero.</li>
+        </ul>
+
+        <h3>Confirmation of Successful Sterilization</h3>
+        <ul class="list">
+            <li>Monitor temperature, pressure, and duration.</li>
+            <li>Perform daily Bowie Dick tests, changing from yellow to purple to indicate success.</li>
+            <li>Use biological indicators fortnightly to ensure bacteria elimination.</li>
+            <li>TST indicators with each load change color to confirm sterilization; any deviation requires re-sterilization.</li>
+            <li>Tape indicators on items turn black post-sterilization and are recorded for tracking.</li>
+            <li>Items remain sterile for 48 hours; unused items are re-sterilized.</li>
+        </ul>
+
+        <h3>Flash Sterilizer</h3>
+        <p>A flash sterilizer, with shorter cycles, is used for smaller items like probes and sleeves, following similar principles to ensure safety and sterility in ophthalmic surgeries.</p>
+        <div class="images">
+            <img src="static/images/steriliser1.png" alt="Image 2">
+            <img src="static/images/steriliser2.png" alt="Image 2">
+         </div>
+    </div>
+
+    {% include 'footer.html' %}
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

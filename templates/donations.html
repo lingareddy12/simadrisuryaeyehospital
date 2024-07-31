@@ -85,6 +85,28 @@
             border: 6px solid pink;
 
         }
+        .donatebtn{ 
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin:20px 0 20px 0;
+        }
+
+        .btn{
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover{
+            background-color:green;
+            color:white;
+        }
+
+    
     </style>
 </head>
 <body>
@@ -99,9 +121,9 @@
             <div class="upper-row">
                
                 <div class="matter" ><h2>Your Support Transforms Lives</h2>
-                    <p>Imagine a world where every person has the gift of sight. For many, this is not just a dream but a reality waiting to be unlocked. Your generous donation can help us provide essential eye care services to those in need, ensuring that more people can experience the beauty of the world around them.</p>
-                    <p>Every contribution, big or small, brings us closer to a future where everyone has access to the vision care they deserve. By supporting our cause, you are not only changing lives but also creating a brighter, more hopeful future for countless individuals.</p>
-                    <p>Join us in our mission to help those who need it most. Together, we can make vision care accessible to everyone and give the gift of sight to those who have never seen it. Your kindness will light up lives and restore hope.</p></div>
+                   <p>Imagine a world where every person has the gift of sight. For many, this is not just a dream but a reality waiting to be unlocked. Your generous donation can help us provide essential eye care services to those in need, ensuring that more people can experience the beauty of the world around them.
+                    Every contribution, big or small, brings us closer to a future where everyone has access to the vision care they deserve. By supporting our cause, you are not only changing lives but also creating a brighter, more hopeful future for countless individuals.
+                    Join us in our mission to help those who need it most. Together, we can make vision care accessible to everyone and give the gift of sight to those who have never seen it. Your kindness will light up lives and restore hope.</p></div>
             </div>
         </div> 
 
@@ -124,11 +146,18 @@
         </div>
         <div class="card">
             <p><span class="label"><strong>Bank Address:</strong></span> Nowrangapur Bazar, Near Block Office Main Road Gadabaguda, Nowrangapur District, Odisha 764059</p>
+        </div> 
+
+        <div class="donatebtn"> 
+          <a class="btn" href="{{ url_for('payment')}}">Donate Through UPI</a>
         </div>
+
         <div class="footer">
             For any queries, please contact us at <a href="mailto:info@example.com">info@example.com</a>.
         </div>
-    </div>
+    </div>  
+
+
 
     {% include 'footer.html' %}
 

@@ -88,6 +88,15 @@ def team():
 def donate(): 
     return render_template('donations.html')
 
+@app.route('/payment',methods=['GET','POST'])
+def payment(): 
+    return render_template('payment.html')
+
+@app.route('/Pro Active Measures',methods=['GET','POST'])
+def activemeasures(): 
+    return render_template('activemeasures.html')
+
+
 
 
 

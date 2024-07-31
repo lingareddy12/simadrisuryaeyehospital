@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+      
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            margin-top:30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #e9f5ff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            border:12px solid pink;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size:18px;
+            color: blue;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            height: 42px; /* Ensure consistent height */
+        }
+        .form-group input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        .form-group input[type="number"]::-webkit-outer-spin-button,
+        .form-group input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .btn {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            height: 42px; /* Ensure consistent height */
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        #txtname{
+            max-width:1700px;
+        
+        }
+        .donatebtn{ 
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin:20px 0 20px 0;
+        }
+
+        .btn{
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            width:100px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover{
+            background-color:green;
+            color:white;
+        }
+
+    </style>
+</head>
+<body>
+
+    {% include 'header.html' %}
+
+    <div class="container">
+        <h2>Donation Form</h2> 
+
+        <p>Please Enter your details and change on the “Quantity” if you like to add more beneficiaries.</p>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="txtname" required>
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email ID</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label>Donation Type</label>
+            <input type="text" value="Cataract Surgery" readonly>
+        </div>
+        <div class="form-group">
+            <label>Amount per Surgery</label>
+            <input type="text" value="₹7500" readonly>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" value="1" min="1" oninput="calculateAmount()">
+        </div>
+        <div class="form-group">
+            <label for="netamount">Net Amount</label>
+            <input type="text" id="netamount" readonly>
+        </div>
+    </div> 
+
+    <div class="donatebtn"> 
+        <a class="btn" href="{{ url_for('payment')}}">Donate</a>
+      </div>
+
+    {% include 'footer.html' %}
+
+    <script>
+        function calculateAmount() {
+            const quantity = document.getElementById('quantity').value;
+            const amountPerQuantity = 7500;
+            const netAmount = quantity * amountPerQuantity;
+            document.getElementById('netamount').value = `₹${netAmount}`;
+        }
+        window.onload = calculateAmount; // Calculate amount on page load
+    </script>
+</body>
+</html>
