@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simadri Surya Eye Hospital</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
@@ -202,7 +197,7 @@
    
 
     </style>
-</head>
+
 <body>    
 
 
@@ -285,10 +280,17 @@
         <div class="nav-item">
             <a href="{{ url_for('donate')}}">Donate</a> 
         </div>
-
+    
+        {% if session['isloggedin'] %}
         <div class="nav-item">
-            <a href="{{ url_for('login')}}">Login</a> 
+            <a href="{{ url_for('logout') }}">Logout</a>
         </div>
+            {% else %}
+            <div class="nav-item">
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
+            {% endif %}
+        
         
         </div>
     </div> 
@@ -308,4 +310,4 @@
         });
     </script>
 </body>
-</html>
+

@@ -29,8 +29,16 @@ def delete_all_rows():
     conn.commit()
     cur.close()
     conn.close()
+    
+def delete_stat_table():
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute('''
+       Drop table hospital_statistics''')
+    conn.commit()
+    cur.close()
+    conn.close()
 
 # Example usage
 if __name__ == "__main__":
-    create_table()  # Ensure the table exists
-    delete_all_rows()  # Delete all rows from the table
+    delete_stat_table()

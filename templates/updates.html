@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outpatients Data Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            border : 10px solid pink;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 900px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-group table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .form-group table, .form-group th, .form-group td {
+            border: 1px solid #ddd;
+        }
+        .form-group th, .form-group td {
+            padding: 10px;
+            text-align: center;
+        }
+        .form-group th {
+            background-color: #f2f2f2;
+        }
+        .form-group button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .form-group button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+
+    {% include 'header.html' %}
+
+    <h1 style="margin:20px 0px 20px 0px;">Update Hospital Statistics</h1>
+    <div class="container">
+        <form method="POST" action="/updates">
+            <div class="form-group">
+                <label for="date-of-updation">Date of Updation</label>
+                <input type="date" id="date-of-updation" name="date-of-updation" required>
+            </div>
+            <div class="form-group">
+                <label for="outpatients-treated">Outpatients Treated</label>
+                <input type="number" id="outpatients-treated" name="outpatients-treated" required>
+            </div>
+            <div class="form-group">
+                <label for="medicines-prescribed">Medicines Prescribed</label>
+                <input type="number" id="medicines-prescribed" name="medicines-prescribed" required>
+            </div>
+            <div class="form-group">
+                <label for="optical-prescribed">Optical Prescribed</label>
+                <input type="number" id="optical-prescribed" name="optical-prescribed" required>
+            </div>
+            <div class="form-group">
+                <label for="surgeries-prescribed">Surgeries Prescribed</label>
+                <input type="number" id="surgeries-prescribed" name="surgeries-prescribed" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Surgeries Details</label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type of Surgery</th>
+                            <th>Male</th>
+                            <th>Female</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cataract</td>
+                            <td><input type="number" name="cataract-male" required></td>
+                            <td><input type="number" name="cataract-female" required></td>
+                        </tr>
+                        <tr>
+                            <td>Cornea</td>
+                            <td><input type="number" name="cornea-male" required></td>
+                            <td><input type="number" name="cornea-female" required></td>
+                        </tr>
+                        <tr>
+                            <td>Retina</td>
+                            <td><input type="number" name="retina-male" required></td>
+                            <td><input type="number" name="retina-female" required></td>
+                        </tr>
+                        <tr>
+                            <td>Orbit</td>
+                            <td><input type="number" name="orbit-male" required></td>
+                            <td><input type="number" name="orbit-female" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
