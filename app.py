@@ -96,6 +96,44 @@ def payment():
 def activemeasures(): 
     return render_template('activemeasures.html')
 
+@app.route('/Admin',methods=['GET','POST'])
+def login(): 
+    if request.method == 'POST':
+        name = request.form['name']
+        passw = request.form['password']
+        if name=="sseh" and passw=="sseh@2024":
+            return redirect(url_for('index'))
+        else:
+            return redirect(url_for('login'))
+            
+    return render_template('login.html')
+
+
+
+@app.route('/updates', methods=['GET', 'POST'])
+def updates():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        rating = request.form['rate']
+        review = request.form['review'] 
+      
+        
+        # Insert data into database
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute('''
+            INSERT INTO feedbacks (name, email, rating, review) VALUES (%s, %s, %s, %s);
+        ''', (name, email, rating, review))
+        conn.commit()
+        cur.close()
+        conn.close()
+        flash('Thank you for your feedback!')
+        return redirect(url_for('index'))
+    
+    return render_template('reviewform.html')
+
+
 
 
 
