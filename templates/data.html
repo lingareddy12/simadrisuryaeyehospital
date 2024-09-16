@@ -28,21 +28,34 @@
         .row1 {
             width: 100%;
             display: flex;
+            
             align-items: center;
             justify-content: space-between;
             gap: 20px;
             margin: 5px;
         }
+
+        .row2{
+            width: 100%;
+            display: flex;
+            
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 15px;
+        } 
         .counter-box {
             width: 100%;
             height: 100%;
+        
             background: #12192c;
-            padding: 20px 0;
+            padding: 20px 0 20px 0px; 
             border-radius: 10px;
             box-shadow: 0 0 20px -4px #66676c;
             color: #fff;
             text-align: center;
         }
+        
         .counter-box .fa {
             font-size: 40px;
             color: rgba(16, 211, 97, 0.603);
@@ -65,23 +78,36 @@
         .chart-container {
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 60px 0;
+            gap: 40px;
+        }
+
+        .chart-row {
+            display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
             width: 100%;
+            gap: 20px;
+        }
 
-            margin: 60px 0;
-        }
         .chart-box {
-            width: 40%;
+            width: 38%;
         }
+
+        .chart-title {
+            text-align: center;
+            font-weight: bold;
+            font-size:20px;
+            margin-bottom: 10px;
+        }
+
         @media (max-width: 768px) {
-            .chart-container {
-                margin-top: 20px;
-                display: flex;
+            .chart-row {
                 flex-direction: column;
-                align-items: center;
-                gap: 40px;
             }
             .chart-box {
                 width: 80%;
@@ -96,7 +122,7 @@
     <div class="hero">
         <div class="title">
             <h1 style="font-size: 40px;">Hospital Treatment Statistics</h1>
-            <h5><strong>26 February 2024 To {{stats[5] }}</strong></h5>
+            <h5><strong>26 February 2024 To {{stats[0] }}</strong></h5>
         </div>
         <div class="row1">
             <div class="counter-box">
@@ -111,23 +137,44 @@
             </div>
             <div class="counter-box">
                 <i class="fa fa-book"></i>
-                <h2 class="counter">{{stats[3] }}</h2>
+                <h2 class="counter">{{stats[3] }}</h3>
                 <h3>Opticals Prescribed</h3>
             </div>
+        </div>
+        <div class="row2">
             <div class="counter-box">
                 <i class="fa fa-book"></i>
                 <h2 class="counter">{{stats[4] }}</h2>
                 <h3>Surgeries Performed</h3>
             </div>
+            <div class="counter-box">
+                <i class="fa fa-book"></i>
+                <h2 class="counter">{{stats[5] }}</h2>
+                <h3>Free Surgeries Performed</h3>
+            </div>
         </div>
     </div>
 
     <div class="chart-container">
-        <div class="chart-box">
-            <canvas id="singleBarChart"></canvas>
+        <div class="chart-row">
+            <div class="chart-box">
+                <div class="chart-title">Cataract Surgeries Performed</div>
+                <canvas id="cataractBarChart"></canvas>
+            </div>
+            <div class="chart-box">
+                <div class="chart-title">Cornea Surgeries Performed</div>
+                <canvas id="corneaBarChart"></canvas>
+            </div>
         </div>
-        <div class="chart-box">
-            <canvas id="doubleBarChart"></canvas>
+        <div class="chart-row">
+            <div class="chart-box">
+                <div class="chart-title">Retinal Surgeries Performed</div>
+                <canvas id="retinaBarChart"></canvas>
+            </div>
+            <div class="chart-box">
+                <div class="chart-title">Orbital Surgeries Performed</div>
+                <canvas id="orbitBarChart"></canvas>
+            </div>
         </div>
     </div>
 
@@ -135,95 +182,72 @@
 
     <!-- Chart.js Library -->
     <script>
-        const singleBarCtx = document.getElementById('singleBarChart').getContext('2d');
-        const doubleBarCtx = document.getElementById('doubleBarChart').getContext('2d');
-
-        const singleBarChart = new Chart(singleBarCtx, {
-            type: 'bar',
-            data: {
-                labels: ['Cataract', 'Cornea', 'Retina', 'Orbit'],
-                datasets: [
-                    {
-                        label: 'Surgeries',
-                        data: [{{stats[6]+stats[7] }}, {{stats[8]+stats[9] }}, {{stats[10]+stats[11] }}, {{stats[12]+stats[13] }}],
-                        backgroundColor: 'rgba(75, 192, 192, 0.5)',
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        borderWidth: 1
-                    }
-                ]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
+        const createChart = (ctx, menData, womenData, label) => {
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Men', 'Women', 'Total'],
+                    datasets: [
+                        {
+                            label: label,
+                            
+                            data: [menData, womenData, menData + womenData],
+                            backgroundColor: [
+                                'rgba(54, 162, 235, 0.5)',
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(75, 192, 192, 0.5)'
+                            ],
+                            borderColor: [
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(75, 192, 192, 1)'
+                            ],
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: Math.max(menData, womenData, menData + womenData) * 1.5
+                        },
+                        x: {
+                            barPercentage: 0.2,      // Adjusts the width of each individual bar
+                            categoryPercentage: 0.5, // Adjusts the width of the bars within each category
+                        }
+                    },
+                    responsive: true,
+                    
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                        datalabels: {
+                            anchor: 'end',
+                            align: 'top',
+                            color: '#444',
+                            font: {
+                                weight: 'bold',
+                                size: 16
+                            },
+                            formatter: (value) => value
+                        }
                     }
                 },
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    datalabels: {
-                        anchor: 'end',
-                        align: 'top',
-                        color: '#444',
-                        font: {
-                            weight: 'bold',
-                            size: 16
-                        },
-                        formatter: (value) => value
-                    }
-                }
-            },
-            plugins: [ChartDataLabels]
-        });
+                plugins: [ChartDataLabels]
+            });
+        };
 
-        const doubleBarChart = new Chart(doubleBarCtx, {
-            type: 'bar',
-            data: {
-                labels: ['Cataract', 'Cornea', 'Retina', 'Orbit'],
-                datasets: [
-                    {
-                        label: 'Men',
-                        data: [{{stats[6]}}, {{stats[8]}}, {{stats[10]}}, {{stats[12]}}],
-                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Women',
-                        data: [{{stats[7]}}, {{stats[9]}}, {{stats[11]}}, {{stats[13]}}],
-                        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        borderWidth: 1
-                    }
-                ]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                },
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    datalabels: {
-                        anchor: 'end',
-                        align: 'top',
-                        color: '#444',
-                        font: {
-                            weight: 'bold',
-                            size: 16
-                        },
-                        formatter: (value) => value
-                    }
-                }
-            },
-            plugins: [ChartDataLabels]
-        });
+        const cataractBarCtx = document.getElementById('cataractBarChart').getContext('2d');
+        const corneaBarCtx = document.getElementById('corneaBarChart').getContext('2d');
+        const retinaBarCtx = document.getElementById('retinaBarChart').getContext('2d');
+        const orbitBarCtx = document.getElementById('orbitBarChart').getContext('2d');
+
+        createChart(cataractBarCtx, {{stats[6]}}, {{stats[7]}}, 'Cataract');
+        createChart(corneaBarCtx, {{stats[8]}}, {{stats[9]}}, 'Cornea');
+        createChart(retinaBarCtx, {{stats[10]}}, {{stats[11]}}, 'Retina');
+        createChart(orbitBarCtx, {{stats[12]}}, {{stats[13]}}, 'Orbit');
     </script>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>

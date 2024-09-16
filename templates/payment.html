@@ -8,21 +8,33 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-      
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
         }
         .container {
-            margin-top:30px;
+            margin-top: 30px;
+            
             padding: 20px;
             border-radius: 10px;
             background-color: #e9f5ff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            display: flex;
+            flex-direction: row; /* Side-by-side layout */
+            width: 800px; /* Adjust the width as needed */
             text-align: center;
-            border:12px solid pink;
+            border: 12px solid pink;
+        }
+        .form-section {
+            flex: 1; /* Allow the form section to grow */
+            padding: 20px;
+        }
+        .qr-section {
+            flex: 1; /* Allow the QR section to grow */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .container h2 {
             margin-bottom: 20px;
@@ -35,7 +47,7 @@
         .form-group label {
             display: block;
             margin-bottom: 5px;
-            font-size:18px;
+            font-size: 18px;
             color: blue;
         }
         .form-group input {
@@ -73,32 +85,33 @@
         .btn:hover {
             background-color: #0056b3;
         }
-        #txtname{
-            max-width:1700px;
-        
+        #txtname {
+            max-width: 1700px;
         }
-        .donatebtn{ 
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            margin:20px 0 20px 0;
+        .donatebtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
         }
-
-        .btn{
+        .btn {
             background-color: #007BFF;
             color: #fff;
             padding: 10px 20px;
             border: none;
-            width:100px;
+            width: 100px;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        .btn:hover{
-            background-color:green;
-            color:white;
+        .btn:hover {
+            background-color: green;
+            color: white;
         }
-
+        .qr-section img {
+            max-width: 100%; /* Ensure the image is responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
     </style>
 </head>
 <body>
@@ -106,42 +119,47 @@
     {% include 'header.html' %}
 
     <div class="container">
-        <h2>Donation Form</h2> 
-
-        <p>Please Enter your details and change on the “Quantity” if you like to add more beneficiaries.</p>
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="txtname" required>
+        <div class="form-section">
+            <h2>Donation Form</h2> 
+            <p>Please enter your details and change the “Quantity” if you would like to add more beneficiaries.</p>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="txtname" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" pattern="[0-9]{10}" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label>Donation Type</label>
+                <input type="text" value="Cataract Surgery" readonly>
+            </div>
+            <div class="form-group">
+                <label>Amount per Surgery</label>
+                <input type="text" value="₹7500" readonly>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" value="1" min="1" oninput="calculateAmount()">
+            </div>
+            <div class="form-group">
+                <label for="netamount">Net Amount</label>
+                <input type="text" id="netamount" readonly>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="mobile">Mobile Number</label>
-            <input type="tel" id="mobile" pattern="[0-9]{10}" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email ID</label>
-            <input type="email" id="email" required>
-        </div>
-        <div class="form-group">
-            <label>Donation Type</label>
-            <input type="text" value="Cataract Surgery" readonly>
-        </div>
-        <div class="form-group">
-            <label>Amount per Surgery</label>
-            <input type="text" value="₹7500" readonly>
-        </div>
-        <div class="form-group">
-            <label for="quantity">Quantity</label>
-            <input type="number" id="quantity" value="1" min="1" oninput="calculateAmount()">
-        </div>
-        <div class="form-group">
-            <label for="netamount">Net Amount</label>
-            <input type="text" id="netamount" readonly>
+        
+        <div class="qr-section">
+            <img src="/static/images/QR.jpg" alt="Pay to this QR Code"> <!-- Replace with the actual path to your QR code image -->
         </div>
     </div> 
 
     <div class="donatebtn"> 
         <a class="btn" href="{{ url_for('payment')}}">Donate</a>
-      </div>
+    </div>
 
     {% include 'footer.html' %}
 

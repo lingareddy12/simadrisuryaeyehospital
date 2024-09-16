@@ -283,6 +283,9 @@
     
         {% if session['isloggedin'] %}
         <div class="nav-item">
+            <a href="{{ url_for('updates') }}">Update</a>
+        </div>
+        <div class="nav-item">
             <a href="{{ url_for('logout') }}">Logout</a>
         </div>
             {% else %}

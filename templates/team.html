@@ -10,53 +10,65 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <style>  
 
-        
         .teamcontainer {
             width: 100%;
-            height:auto;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px; /* Gap between boxes */ 
-           
-           
         }
+    
         .teambox {
             padding: 10px;
             border-radius: 15px;
-            background-color:pink;
+            background-color: pink;
             text-align: center; 
-            flex: 1 1 calc(33.333% - 20px); /* 3 boxes per row with 20px gap on both sides */
-            max-width: calc(33.333% - 20px);
-          
+            flex: 1 1 calc(50% - 40px); /* 2 boxes per row with 20px gap on both sides */
+            max-width: calc(50% - 40px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative; 
+            overflow: hidden;
+        } 
+    
+        .details {
+            display: none;
+            background-color: white;
+            color: black;
+            padding: 10px;
         }
+    
+        .teambox:hover {
+            transform: scale(1.0); /* Slightly expand the hovered box */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow effect */ 
 
-        #ourteam{
-            justify-content:center;
+        }
+    
+        .teambox:hover .details {
+            display: block;
+        }
+      
+    
+    
+        #ourteam {
+            justify-content: center;
             display: flex;
             font-family: Georgia, serif;
-             padding:20px;
-      }
+            padding: 20px;
+        }
+    
         @media (max-width: 768px) {
             .teambox {
-                flex: 1 1 calc(50%- 20px); /* 1 box per row with 20px gap on both sides */
-                max-width: calc(100%);
-            } 
-
-            .teamcontainer{
-                  display:flex;
-                  flex-direction:column;
-                  justify-content:center;
-                font-family: Georgia, serif;
-         
+                flex: 1 1 calc(100% - 20px); /* 1 box per row with 20px gap on both sides */
+                max-width: 100%;
             }
-        }  
-
-       
-
-       
-  
+    
+            .teamcontainer {
+                flex-direction: column;
+                font-family: Georgia, serif;
+            }
+        }
     </style>
+    
 </head>
 <body>
 
@@ -72,21 +84,43 @@
         <div class="teambox">
             <img class="bd-placeholder-img rounded-circle" src="/static/images/doctor2.jpg" width="140" height="140" alt="Dr.Sukesh">
             <h2 class="fw-normal">Dr. Sukesh Gullipalli</h2>
-            <p>Ophthalmologist</p>
-           
+            <p><strong>Ophthalmologist</strong></p>
+            <div class="details">
+                <p>Dr. Sukesh Gulipalli completed his MBBS from NTR University of Health Sciences in 2012, followed by an internship at King George Hospital, Visakhapatnam. He pursued a post graduate 
+                    diploma in Ophthalmology from HV Desai Eye Hospital, Pune and subsequently completed a fellowship in Medical Glaucoma. Currently, Dr. Sukesh serves as a Consultant Ophthalmologist 
+                    and Glaucoma Specialist at Simadri Surya eye Hospital, Nabarangpur, Odisha, where he is dedicated to providing advanced eye care and specialized glaucoma treatment. He has performed
+                     more than 500 surgeries for treating cataract and other retinal disorders.<p>
+            </div>
         </div>
 
         <div class="teambox">
             <img class="bd-placeholder-img rounded-circle" src="/static/images/doctor3.jpg" width="140" height="140" alt="Dr. Vikhasini">
             <h2 class="fw-normal">Dr. Vikhasini</h2>
-            <p>Ophthalmologist</p>
+            <p><strong>Ophthalmologist</strong></p>
+
+            <div class="details">
+                <p>Dr.Korupolu Vikasini earned her MBBS from Rajiv Gandhi Institute of Medical Sciences, Srikakulam,
+                     affiliated with NTR University of Health Sciences, in 2012. She completed her post graduate training in
+                      Ophthalmology at Guntur Medical College. Dr. Vikasini also gained valuable experience  in the Orbit & Oculoplasty Department at
+                       Sankar Foundation Eye Hospital, Visakhapatnam. Currently, Dr. Vikasini serves as a Consultant Ophthalmologist at Simadri Surya eye Hospital in Nabarangpur,
+                        Odisha, where they provide expert eye care treatment and performed more than 300 surgeries. 
+                    <p>
+            </div>
             
         </div>
 
         <div class="teambox">
             <img class="bd-placeholder-img rounded-circle" src="/static/images/doctor1.jpg" width="140" height="140" alt="Dr. Dweej Shah">
             <h2 class="fw-normal">Dr. Dweej Shah</h2>
-            <p>Resident Doctor</p>
+            <p><strong>Resident Doctor</strong></p>
+
+            <div class="details">
+                <p>
+                    Dr. Dweej Shah, Consultant and surgical training department at Simadri Surya Eye Hospital,
+                     Nabarangpur, Odisha on the topic of the Demography, challenges in diagnosing Glaucoma. Dr. Shah received his MBBS degree from Gujarat Cancer Society Medical College [New Civil] Ahmedabad, Gujarat University,
+                     and completed MS. Ophthalmology DNB at Sankar Foundation Eye Hospital Visakhapatnam.
+                </p>
+            </div>
             
         </div>
 
@@ -98,6 +132,24 @@
     
 
 
+    <script>
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const box = this.parentElement;
+                box.classList.toggle('show');
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById("btn1").onclick = function() {
+            this.style.display = "none";
+        };
+    
+        document.getElementById("btn2").onclick = function() {
+            this.style.display = "none";
+        };
+    </script>
 
 
     

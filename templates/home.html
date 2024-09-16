@@ -330,6 +330,7 @@
     .box {
         width: 100%; /* Each box takes full width on smaller screens */
     }
+
 }
 
 
@@ -441,6 +442,12 @@
                 .background-image {
                     height: 45vh;
                 }
+
+                    
+               .services-sectionv h2{
+                 font-size: 8px;
+                   }
+
             }
             
 
@@ -582,6 +589,12 @@
                 }
             });
         });
+    </script>
+
+    <script>
+
+        history.pushState(null, null, location.href);
+        window.onpopstate = () => history.go(1);
     </script>
 
     <script>
